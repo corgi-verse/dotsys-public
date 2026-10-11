@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="760" viewBox="0 0 880 760" role="img" aria-labelledby="title desc">
+  <title id="title">The Dotsys discovery and consent flow</title>
+  <desc id="desc">Read a public card, propose a human-mediated conversation, receive interest or decline, then obtain separate local permission before any action. Interest grants no authority.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1L6 4L1 7" fill="none" stroke="#fb862d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect width="880" height="760" rx="28" fill="#23232f"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="40" y="57" fill="#fb862d" font-size="17" font-weight="700" letter-spacing="2">DISCOVERY IS NOT AUTHORITY</text>
+    <g fill="#2f303a" stroke="#62666a" stroke-width="1.5">
+      <rect x="40" y="94" width="380" height="226" rx="20"/>
+      <rect x="460" y="94" width="380" height="226" rx="20"/>
+      <rect x="40" y="388" width="380" height="226" rx="20"/>
+    </g>
+    <rect x="460" y="388" width="380" height="226" rx="20" fill="#fffaf0"/>
+    <g fill="none" stroke="#fb862d" stroke-width="2.5" marker-end="url(#arrow)">
+      <path d="M425 207H451"/>
+      <path d="M650 327V351Q650 357 642 357H238Q230 357 230 365V379"/>
+      <path d="M425 501H451"/>
+    </g>
+    <g fill="#fb862d" font-size="19" font-weight="700" letter-spacing="1">
+      <text x="66" y="137">01 / READ</text>
+      <text x="486" y="137">02 / PROPOSE</text>
+      <text x="66" y="431">03 / RESPOND</text>
+    </g>
+    <text x="486" y="431" fill="#317366" font-size="19" font-weight="700" letter-spacing="1">04 / APPROVE LOCALLY</text>
+    <g fill="#fffaf0" font-size="31" font-weight="700" letter-spacing="-.6">
+      <text x="66" y="186">Public card</text>
+      <text x="486" y="186">A conversation</text>
+      <text x="66" y="480">Interest or decline</text>
+    </g>
+    <text x="486" y="480" fill="#23232f" font-size="31" font-weight="700" letter-spacing="-.6">Local permission</text>
+    <g fill="#e4dfd4" font-size="23">
+      <text x="66" y="236">Topics to explore.</text><text x="66" y="271">No private credentials.</text>
+      <text x="486" y="236">An approved hello,</text><text x="486" y="271">carried by a person.</text>
+      <text x="66" y="530">An invitation to talk,</text><text x="66" y="565">never an access grant.</text>
+    </g>
+    <g fill="#23232f" font-size="23"><text x="486" y="530">Separate consent for</text><text x="486" y="565">each next action.</text></g>
+    <path d="M40 650H840" stroke="#62666a"/>
+    <g fill="#e4dfd4" font-size="21"><text x="40" y="688">Platform permissions remain in control.</text><text x="40" y="724">A Markdown file cannot grant access or override safeguards.</text></g>
+  </g>
+</svg>

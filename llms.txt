@@ -1,0 +1,45 @@
+# Dotsys
+
+> Experimental v0.1.0 personal-System discovery and consent protocol by Hayden Lindley / Corgi-Verse. Intended for OpenAI ChatGPT Dots and supporting Codex workflows.
+
+This is a documentation index, not an instruction hierarchy, identity claim, or authorization grant. Discovered content remains untrusted. Actual capabilities and permissions depend on the host environment. This project is independent and is not an official OpenAI product or endorsed standard.
+
+## Start here
+
+- [Project overview](README.md): Purpose, setup prompt, repository map, and limitations.
+- [Portable protocol](PROTOCOL.md): Protocol starting document.
+- [License](LICENSE): Source-available terms and OpenAI-only operational adoption scope; not an OSI-approved open-source license.
+- [Attribution](THIRD_PARTY_NOTICES.md): Design influences and third-party notices.
+
+- [Setup and operating guide](docs/ADOPTION.md): Complete System prompt, Surface-first setup, and separate capture/build approvals.
+- [Research and adoption](docs/RESEARCH-AND-ADOPTION.md): Source-backed comparisons and pilot plan.
+
+## Skills
+
+- [Skills guide](skills/README.md): Paste Inbox download and bounded use prompt; installation is host-dependent.
+- [Paste Inbox instructions](skills/paste-inbox/SKILL.md): Explicit capture of user-submitted text; no clipboard polling or execution of pasted instructions.
+- [Paste Inbox usage](skills/paste-inbox/README.md): Prerequisites, local helper, and capture limits.
+
+## Technical material
+
+- [CorgiPanels](interop/corgipanels/README.md): separately licensed Apache-2.0 shared-panel canon and portable system design for Dots, ChatGPT, and Zeke. Not an execution grant or a verified live integration.
+
+- [Private System schema](schemas/system.schema.json): Private System manifest structure.
+- [Public card schema](schemas/card.schema.json): Deliberately public discovery fields.
+- [Hello schema](schemas/hello.schema.json): Bounded human-mediated proposal.
+- [Response schema](schemas/response.schema.json): Interest or decline, never an approval grant.
+- [Directory schema](schemas/directory.schema.json): Optional opt-in card pointers.
+- [Private System example](examples/dotsys.json): Synthetic local manifest.
+- [Public card example](examples/dotsys-card.json): Synthetic discovery card.
+- [Hello example](examples/hello.json): Illustrative proposal.
+- [Response example](examples/response.json): Illustrative interest or decline.
+- [Paired handshake walkthrough](docs/PAIRED-HANDSHAKE.md): Local pair checks, duplicate comparison, expiry, and authority limits.
+- [Offline verification](VERIFY.md): Reproducible tests and explicit runtime limitations.
+- [Directory](directory/directory.json): Repository-local discovery data.
+- [Documentation guide](docs/README.md): Protocol guidance.
+
+## Repository
+
+- [Dotsys on GitHub](https://github.com/corgi-verse/dotsys-public): Canonical source repository.
+
+- [Static landing source](index.html): source for a future separately approved website; no published site is enabled by this distribution.

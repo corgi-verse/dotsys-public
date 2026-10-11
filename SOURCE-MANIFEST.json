@@ -1,0 +1,524 @@
+{
+  "format": "dotsys-public-source-manifest/1",
+  "protocolVersion": "0.1.0",
+  "sourceRevision": "1a96e99a696878a099f6a9b78d48985ec6860ae8",
+  "sourceDescription": "Reviewed legacy protocol/site snapshot; new clean distribution history",
+  "publicRepository": "https://github.com/corgi-verse/dotsys-public",
+  "websitePublished": false,
+  "upstreamHistoryImported": false,
+  "manifestSelfDigestIncluded": false,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 56,
+      "sha256": "a28a09a9bcc3aad98c8983756e5e356f2155aebb39d45792015c1731a3c4fc9c",
+      "sourceGitBlob": "c92913572d41db292c4cb53a2a2da7436df79d2a",
+      "modified": false
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceGitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "modified": false
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 1288,
+      "sha256": "a439a3c08b80b3b3f10b68d821b712aa28f8ac2a1bd7060212572e81d3da8c04",
+      "sourceGitBlob": "6f24abbca718a6ff6b149fa5269cfde9e2981808",
+      "modified": false
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 2347,
+      "sha256": "4e2415c92632647b484ac1ca33e19bc64e524a2a03350bf7b5476b88ac3a47aa",
+      "sourceGitBlob": "89e510cd4930b3d29e696274a5872c8ee4625b5e",
+      "modified": false
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 2344,
+      "sha256": "b190c946f292d21d4ccf788299f9e8486ede5b0f29083c8e349b21263db26415",
+      "sourceGitBlob": "8f2cc8031017587b1323fc1c70029bd29a8e8bd5",
+      "modified": false
+    },
+    {
+      "path": "GOVERNANCE.md",
+      "bytes": 2413,
+      "sha256": "c8aa21c7ad4d07a2a25206f17237a4d1a263bbdc38c2127dbf2a42960426dbc4",
+      "sourceGitBlob": "e8d5ed8d3614a5b4da9cb3877b1e4d4b37e74541",
+      "modified": false
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 4959,
+      "sha256": "57ef4fa57afb5719f3995fc0c4e00247467691ec614204e37ae0e0e38a5e36d9",
+      "sourceGitBlob": "7d48b622d752c96f7466bd097f625c448f77ebdc",
+      "modified": false
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 1383,
+      "sha256": "6145b3539808e3ec30be2ff7746112eddfe5b67dacf48646c04195610853861c",
+      "sourceGitBlob": "43a935a552637d554fdef153b5c332a6ce090660",
+      "modified": false
+    },
+    {
+      "path": "PROTOCOL.md",
+      "bytes": 15784,
+      "sha256": "72719e878f8ec7be1191bff720bd00fd5e36edd2cbf84a9fa2550356a0e6710b",
+      "sourceGitBlob": "5017d57251692c8a2afc5efe29af16162741e622",
+      "modified": true,
+      "modification": "Public distribution source URL only; normative contract unchanged."
+    },
+    {
+      "path": "README.md",
+      "bytes": 17613,
+      "sha256": "52b9bdaef0d47fd68ceff4d2efc13c842c456d91bd1f973874a1e95292e04e9e",
+      "sourceGitBlob": "092a7c73823d70ce6c6d26bf576294b9f4da4394",
+      "modified": true,
+      "modification": "Public source-only status/navigation, provenance notice and no published-website claim; setup prompt unchanged."
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 3633,
+      "sha256": "d2e10e3e75803abc2476ba9089af90774f7f0b8edcc64577dd94c9007724f7f0",
+      "sourceGitBlob": "48391ee831bab0d254aee66731c3d55508bc38a6",
+      "modified": false
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 4063,
+      "sha256": "b138c893ce34e182015bff0be15ef3e784ff0ea498deee84897e18614040f47b",
+      "sourceGitBlob": "ff8d602d5163400d434dafbd6c3743c0a5eb584a",
+      "modified": false
+    },
+    {
+      "path": "VERIFY.md",
+      "bytes": 9184,
+      "sha256": "46a50768bcef3f72054776834ba5086b3ca8360aa81279fdec9e7dd836a53501",
+      "sourceGitBlob": "cebbe9379a316a42ed87eec2392a9e48507820ac",
+      "modified": false
+    },
+    {
+      "path": "assets/README.md",
+      "bytes": 946,
+      "sha256": "f09880cd871a7a2ea42b520c7a27a85428559a1c783d25610e3303142435c84f",
+      "sourceGitBlob": "b7f3a60c74038af7a13b4dbccee7d48e076af2f9",
+      "modified": false
+    },
+    {
+      "path": "assets/architecture.svg",
+      "bytes": 2864,
+      "sha256": "2521663c5a878d85bd7546d248147806c39e0a07e0b415849d19983d979817af",
+      "sourceGitBlob": "1b94a24f2418e51a8d7aef863134765f4a9cfe78",
+      "modified": false
+    },
+    {
+      "path": "assets/dotsys-brand.png",
+      "bytes": 1276046,
+      "sha256": "d8c0449a5cf2081ea63081fc35a4faa429ad0ff4cd397421a7fc0cc9d35ba6df",
+      "sourceGitBlob": "cfd8ccb668eec80c3b0245b4d89912f2f1f2f634",
+      "modified": false
+    },
+    {
+      "path": "assets/dotsys-logo.png",
+      "bytes": 532870,
+      "sha256": "c746def39f950a82606f89ed98db0658a2d9d0624a04db1ebed1f823661ec18d",
+      "sourceGitBlob": "2ecd7e6f96f2c6bab1c3d16a6e897f0e50fb54ee",
+      "modified": false
+    },
+    {
+      "path": "assets/dotsys-logo.svg",
+      "bytes": 25574,
+      "sha256": "e9ce49557d1b531fa9f6ea9792cd5b079c87e36aeeca760285895d957c8fdfee",
+      "sourceGitBlob": "2e471f2169f77372e5ad02ca8aaaeb7aa3bcfc0e",
+      "modified": false
+    },
+    {
+      "path": "assets/hero.svg",
+      "bytes": 2528,
+      "sha256": "0f62b13a21e1cea958cc3a09f7d8d81df38246e3f76108ac2ef2310f7cf06116",
+      "sourceGitBlob": "d976e1b3783ace53c4faa807d5ffc90599388bd8",
+      "modified": false
+    },
+    {
+      "path": "assets/site.css",
+      "bytes": 9001,
+      "sha256": "29f605d31e26ae87d31ab40246f6841bded235b4aea826b513457bc357be3226",
+      "sourceGitBlob": "26f828d2b2ae2aa417a6b14d94e40ac1bcb84215",
+      "modified": false
+    },
+    {
+      "path": "assets/site.js",
+      "bytes": 3062,
+      "sha256": "46ada8298c057dbbb3440b729ed557ca271e1bc2be99832b944171a34e06c218",
+      "sourceGitBlob": "4fdbf742dc8db6784cf7ce6c2146a56847fbb7dc",
+      "modified": false
+    },
+    {
+      "path": "assets/skill-copy.js",
+      "bytes": 1017,
+      "sha256": "b1a12c221975fa4ec8cafaed619d89556ad61c454d72e67c35ce7000fcea5530",
+      "sourceGitBlob": "fdce10a877df050547080f8f167430e71b8b6a7f",
+      "modified": false
+    },
+    {
+      "path": "directory/directory.json",
+      "bytes": 91,
+      "sha256": "ddd15d22dcde475cef1439261ab9fe9876fdacc3ab5a64714256da4d612c996e",
+      "sourceGitBlob": "7df08cabc1c25c5c9914842310f6bcd90c0baa7c",
+      "modified": false
+    },
+    {
+      "path": "docs/ADOPTION.md",
+      "bytes": 12055,
+      "sha256": "5b4bda8cba96f942796f4a1330de2f9bae8fd8d8a3629ae7773c5ebb27d96136",
+      "sourceGitBlob": "19256d45c080d2b780a79690d369cee385fd5716",
+      "modified": true,
+      "modification": "Public source URL outside unchanged setup prompt."
+    },
+    {
+      "path": "docs/INSTANCE-NAMING.md",
+      "bytes": 5557,
+      "sha256": "d87c1f06883bd37a45d475d51b27b85126223c38e5d8b1c715cdd484b28965b8",
+      "sourceGitBlob": "40a2817e29412cd7b8b3b6da13cd07d5ce170c1e",
+      "modified": false
+    },
+    {
+      "path": "docs/PAIRED-HANDSHAKE.md",
+      "bytes": 5683,
+      "sha256": "3cc82ee4b9b7c8ec4bc1814d21c0cc4fbafede6422d6a6d065c0d37cac69cd24",
+      "sourceGitBlob": "fbc4f268a3e5779e8de4b4326b6b1682cc10a652",
+      "modified": false
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 2693,
+      "sha256": "709f590e3a40f9424e26d874e385f4d58f1981f9ac8ba978bf9d7a586e7fc0ce",
+      "sourceGitBlob": "469afe0928dcf15261db78f8a7426ede5890b5bb",
+      "modified": true,
+      "modification": "Remove link to excluded speculative rule-catalog document."
+    },
+    {
+      "path": "docs/RESEARCH-AND-ADOPTION.md",
+      "bytes": 9957,
+      "sha256": "82401b9a24968f63f6e635164da278ca467035a1de316632d913aa70cfe04e7c",
+      "sourceGitBlob": "a185dd23de48a5f6f03adaf46a86515bec0df029",
+      "modified": true,
+      "modification": "Public distribution name and future-only Pages placement language; no existing website claim."
+    },
+    {
+      "path": "downloads/paste-inbox.zip",
+      "bytes": 13989,
+      "sha256": "1bf031f6d5634a4a36c90400250d0435ef33d8e3a7ee2bccada7cf86cef1d963",
+      "sourceGitBlob": "f9f39a7125191c6019c37c415825b91e96ae8831",
+      "modified": true,
+      "modification": "Deterministic archive of reviewed retained skill files, excluding future panel plan; controlling licenses retained."
+    },
+    {
+      "path": "examples/dotsys-card.json",
+      "bytes": 429,
+      "sha256": "1554579fdd96c34c1bfba2104ee44b54476d4d50ca74d0f586d11ecc60ea7db9",
+      "sourceGitBlob": "6a357b0d27501197fdc9520a463b3dc838ffb7f3",
+      "modified": false
+    },
+    {
+      "path": "examples/dotsys.json",
+      "bytes": 302,
+      "sha256": "7996055887dae588f2c1ed6a16403f08c7d75dd8aebb6e58da6a836b6bc3475a",
+      "sourceGitBlob": "b37241a6e37147006e54665378f5e07fd55355d0",
+      "modified": false
+    },
+    {
+      "path": "examples/hello.json",
+      "bytes": 517,
+      "sha256": "817c601e6e20178ac0070272497879b50ac8a4477801d88313bb872ea1e6d871",
+      "sourceGitBlob": "ed70c458f465a1b2ec39a67015779e4638ecca87",
+      "modified": false
+    },
+    {
+      "path": "examples/response.json",
+      "bytes": 358,
+      "sha256": "a20c919f42a48b62790fd4e6d064fa3436e3056d71ba80b9b592ed0983343db8",
+      "sourceGitBlob": "7e18f84d8968f61cb50bdfc2c77a36245e0342dc",
+      "modified": false
+    },
+    {
+      "path": "index.html",
+      "bytes": 19567,
+      "sha256": "e70bc3fd83a5fdbe3fe013d549dac724e8baee45823042db43136ace77a7e4a7",
+      "sourceGitBlob": "2a53f8477e4b3d8f61cc9b275a1a2fc44943a63b",
+      "modified": true,
+      "modification": "Source navigation and removal of website canonical/OG URL; layout/scripts/setup prompt otherwise unchanged."
+    },
+    {
+      "path": "interop/corgipanels/ACCEPTANCE.md",
+      "bytes": 3066,
+      "sha256": "611e60feeab3d750e7f9937efe886b9d918d3b4feaa7651e6596f795020b0c2b",
+      "sourceGitBlob": "58a0b65b684b78992672219bd2cdf500cac56bb7",
+      "modified": false
+    },
+    {
+      "path": "interop/corgipanels/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "sourceGitBlob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "modified": false
+    },
+    {
+      "path": "interop/corgipanels/NOTICE",
+      "bytes": 334,
+      "sha256": "f28d65a0fa42b4601cde0ad5358fa18234de40debabd36fbba7fc6e3fe2f296f",
+      "sourceGitBlob": "1f3e35ac2c97161e7f6103a9ec4f66411f0c5043",
+      "modified": false
+    },
+    {
+      "path": "interop/corgipanels/PROTOCOL.md",
+      "bytes": 14291,
+      "sha256": "b59480b0e7ae6ca2d7ed6f6ce9b34ad2d9c93182c8a0d2c815f86550e74993a5",
+      "sourceGitBlob": "1799044169666511bf2fed9bddd6b7965bc0e9a5",
+      "modified": true,
+      "modification": "Remove product-specific private prototype details; generic interoperability dependency boundary retained."
+    },
+    {
+      "path": "interop/corgipanels/README.md",
+      "bytes": 3484,
+      "sha256": "fdfeb0c1dbbce3dfc2fe6c2c50be34d8dd67fdaa8bdbc3ad9b1d421858b03720",
+      "sourceGitBlob": "11e1b3122204b3a96502a379b0bd53e48a24fd06",
+      "modified": true,
+      "modification": "Remove private product locations and prototype-specific qualification note."
+    },
+    {
+      "path": "interop/corgipanels/example.corgipanel.json",
+      "bytes": 772,
+      "sha256": "5995b425013a58878481632b925cf329fa5b493d8bcb25f6bb303e8340065be2",
+      "sourceGitBlob": "76595407dbbce6207d960b985cd4f0179e8774f6",
+      "modified": false
+    },
+    {
+      "path": "interop/corgipanels/panel.schema.json",
+      "bytes": 3541,
+      "sha256": "aed65ac79a26c9b7b63a7ec695b77ef77c911d4fa2842c95b81458522412e529",
+      "sourceGitBlob": "f2b2e190e72dd5dbace9a01f42e3516f99d236e0",
+      "modified": false
+    },
+    {
+      "path": "interop/corgipanels/test_validate.py",
+      "bytes": 2461,
+      "sha256": "3ba69fa3407e5d1acb994bf61f4f5c9695364686ee041a29b83521730c12f87c",
+      "sourceGitBlob": "7af8c79877c12f95ef8d6500b13fcce14d29ab70",
+      "modified": false
+    },
+    {
+      "path": "interop/corgipanels/validate.py",
+      "bytes": 3526,
+      "sha256": "f9ec6a3e920e1a1646c71cec176e79056b21d27c9d312cf2a44ec9c10f002af4",
+      "sourceGitBlob": "bec6abb2b7f3710bbccc82b4c1fd6c7116b62786",
+      "modified": false
+    },
+    {
+      "path": "llms.txt",
+      "bytes": 3050,
+      "sha256": "c96fdb99f7951fbae4be6c38e9f25ad4d7886c2fe2889887742d8ce370d99d11",
+      "sourceGitBlob": "c4c46dfd5b2b93db5cef0668cc4c72a64b08d55f",
+      "modified": true,
+      "modification": "Public source URL and local static source index rather than published website."
+    },
+    {
+      "path": "reference/check_pair.py",
+      "bytes": 4315,
+      "sha256": "3251cf38da928db87069bda416830f4e7511209c3ba1b8273c7112d58e5e457d",
+      "sourceGitBlob": "3cc33f3281623f258146c6489dc38b882d83c01d",
+      "modified": false
+    },
+    {
+      "path": "reference/plan_name.py",
+      "bytes": 3757,
+      "sha256": "3f4b00a22453a74a4eb4381d5d9e42d9686445fdc309dff60208cec99eb9f3a1",
+      "sourceGitBlob": "b056758fbbf4f614baf8231dc2d1e12ce3ff1139",
+      "modified": false
+    },
+    {
+      "path": "reference/validate.py",
+      "bytes": 8031,
+      "sha256": "7cf310baa1443a86da9946ce1496be565850f20c622b03cf3a67ad96c2151687",
+      "sourceGitBlob": "82846e99359b4c3eaae3b675fc5627cb920cdc28",
+      "modified": false
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 39,
+      "sha256": "9cba6d4508d006391ab899893990d5ac5d03b4811a0f71f152c5883897ee8120",
+      "sourceGitBlob": "8790ebe281089c679686d0689ecd59080899c3cb",
+      "modified": false
+    },
+    {
+      "path": "schemas/card.schema.json",
+      "bytes": 1226,
+      "sha256": "7444851b29765a5f2fae59d0c4a2b0d52806bf4e48d99e362a477a391ae121eb",
+      "sourceGitBlob": "46e53473d16ab2d19f8cf679af6cfec6b80cd31c",
+      "modified": false
+    },
+    {
+      "path": "schemas/directory.schema.json",
+      "bytes": 685,
+      "sha256": "8226d6d4369b4776c7dc8d7de974ce50e8aacf9f2a2c8c3129ad1a0cea336eca",
+      "sourceGitBlob": "3b897309717bc5e4de2147da5c576ea01abdad30",
+      "modified": false
+    },
+    {
+      "path": "schemas/hello.schema.json",
+      "bytes": 1543,
+      "sha256": "96890889c6e5045f7b56109ef337bb0f39541b7ed3d6dc73970312c59437b471",
+      "sourceGitBlob": "c2d123b26fe2f5377491e839a4b8b3e91835b99e",
+      "modified": false
+    },
+    {
+      "path": "schemas/response.schema.json",
+      "bytes": 1195,
+      "sha256": "51be0e966bcf343c8eff79659233864590bfc6f648f02fed114eab3f0d32a604",
+      "sourceGitBlob": "e4b0f0b2b614766ba5f8f2b902c640e90d1a831f",
+      "modified": false
+    },
+    {
+      "path": "schemas/system.schema.json",
+      "bytes": 1508,
+      "sha256": "639e66d3752e585b0785f4ac7ee1c1f9d7f8dd02c0498b76d4173edece613aab",
+      "sourceGitBlob": "e826f539498bd8fc29359de82767fd0be23976d3",
+      "modified": false
+    },
+    {
+      "path": "skills/README.md",
+      "bytes": 2760,
+      "sha256": "72f2fa86b05266ef8350fa9eb6b74ccaa4c4db16f429d487acf563d5721d458b",
+      "sourceGitBlob": "4c8665711d33848d7679c2a85efbe38ff65f1d89",
+      "modified": true,
+      "modification": "Remove excluded speculative rule-catalog link; unchanged bounded skill use prompt."
+    },
+    {
+      "path": "skills/paste-inbox/LICENSE",
+      "bytes": 4959,
+      "sha256": "57ef4fa57afb5719f3995fc0c4e00247467691ec614204e37ae0e0e38a5e36d9",
+      "sourceGitBlob": "7d48b622d752c96f7466bd097f625c448f77ebdc",
+      "modified": false
+    },
+    {
+      "path": "skills/paste-inbox/NOTICE",
+      "bytes": 1383,
+      "sha256": "6145b3539808e3ec30be2ff7746112eddfe5b67dacf48646c04195610853861c",
+      "sourceGitBlob": "43a935a552637d554fdef153b5c332a6ce090660",
+      "modified": false
+    },
+    {
+      "path": "skills/paste-inbox/README.md",
+      "bytes": 3307,
+      "sha256": "bebd722a85403f45d3a560015888cb2ee5a6a630669b8f99de799b210b45db04",
+      "sourceGitBlob": "61b956fce09c4bb4d35c4c1ca4e155e6d0948601",
+      "modified": true,
+      "modification": "Remove excluded future panel-planning reference."
+    },
+    {
+      "path": "skills/paste-inbox/SKILL.md",
+      "bytes": 4645,
+      "sha256": "982f3a020a6315aabbff5ab72c8f49314b161a5a11b2a9d219053764e3e52aca",
+      "sourceGitBlob": "f72fdcffec29c5b47c690aec8b2296872f5c1ee8",
+      "modified": true,
+      "modification": "Remove excluded future panel-planning reference; local capture authority unchanged."
+    },
+    {
+      "path": "skills/paste-inbox/references/contract.md",
+      "bytes": 3515,
+      "sha256": "2782106d7a55c97b77d0ec514de7cb9b3537fe8ea2d946dc9e2ce76d9d551474",
+      "sourceGitBlob": "4fc5e42d32eccd61c42495e6e461330553ecb50c",
+      "modified": false
+    },
+    {
+      "path": "skills/paste-inbox/scripts/paste_inbox.py",
+      "bytes": 8761,
+      "sha256": "c95a9e76931a9517f4d2b0929073a28cef5452d79e56ed0e691014b65e7736b1",
+      "sourceGitBlob": "a27c314127a9e17a0d01473ead06b5108b8fb967",
+      "modified": false
+    },
+    {
+      "path": "skills/paste-inbox/scripts/test_paste_inbox.py",
+      "bytes": 4494,
+      "sha256": "d99696a58ef130d7bac8f26aff95387da8fbd68b9d108040036c398604ad31f3",
+      "sourceGitBlob": "6088cb55f6139f5c25dffa41038701c8f4a75191",
+      "modified": false
+    },
+    {
+      "path": "tests/fixtures/pairs/declined.json",
+      "bytes": 364,
+      "sha256": "475900c8f3396515e55501964ce0263a7a6d72d048a3c7453b5a40682a3da57d",
+      "sourceGitBlob": "6aad034ba5f2fdec6a993cf3dc583db3659effb4",
+      "modified": false
+    },
+    {
+      "path": "tests/fixtures/pairs/mismatched-id.json",
+      "bytes": 358,
+      "sha256": "3dec8235d6336b58951c864f4f14e10715862715c551993d57f8d65127b64df4",
+      "sourceGitBlob": "c01d105581569067672af9b5463e97b3f9a57d3a",
+      "modified": false
+    },
+    {
+      "path": "tests/test_check_pair.py",
+      "bytes": 8541,
+      "sha256": "bd56f7df4d733e569d86e48205fb043c944a5c34b5181e8e18ea1c2d6e9e8ecd",
+      "sourceGitBlob": "5975e023519eb882d7d0793af072181486f515fc",
+      "modified": false
+    },
+    {
+      "path": "tests/test_documentation_links.py",
+      "bytes": 3122,
+      "sha256": "b6a90f9dcf2844d443ccff555c044017dad05e0d7e149643e264bef5c671e1df",
+      "sourceGitBlob": "f732f84616815d3cc7177acf895549a8e1c55664",
+      "modified": true,
+      "modification": "Expected source URL adjusted for public distribution."
+    },
+    {
+      "path": "tests/test_plan_name.py",
+      "bytes": 6336,
+      "sha256": "4686d81900e27f7bde6dbb615a179d9a6c4c19a8043458e00e44a5db6ebfd6cd",
+      "sourceGitBlob": "6dd5a029d78a4d3bc86574a6cf76d62924eca531",
+      "modified": false
+    },
+    {
+      "path": "tests/test_site_copy.cjs",
+      "bytes": 7481,
+      "sha256": "70f0a02b16cacd897a34adfd2b75c5c909fd256c1c359f836488edc0aadb2e08",
+      "sourceGitBlob": "94d170157cb466fc2db75ab84340a9d64114bd22",
+      "modified": false
+    },
+    {
+      "path": "tests/test_skill_copy.cjs",
+      "bytes": 2489,
+      "sha256": "9865b7572b45e254e725972a9890331c66380f3319dcdd41b512b220181dd249",
+      "sourceGitBlob": "7c1357269b8725ea27484c46575e73b7dcffe3ed",
+      "modified": false
+    },
+    {
+      "path": "tests/test_skills_section.py",
+      "bytes": 2738,
+      "sha256": "56992fbf43fc28d5e9e9467627f45423396aed2e86cefdfca7359c2e06004e5d",
+      "sourceGitBlob": "38ace573d8abc9b734feaa15b263bc343bf06b34",
+      "modified": false
+    },
+    {
+      "path": "tests/test_validate.py",
+      "bytes": 11158,
+      "sha256": "2589d44e300696c446935ceb96973d18d55d098a519f7ba8cbc30a8a57386561",
+      "sourceGitBlob": "0ef0868d68639d51db48cff282ff077d9eef1179",
+      "modified": false
+    },
+    {
+      "path": "DISTRIBUTION.md",
+      "bytes": 2834,
+      "sha256": "2f1e32171660d1f8afb95b79cd0a2fcfbd1ef04b2fb1609ac1a5a702a9c2d460",
+      "sourceGitBlob": null,
+      "modified": true,
+      "modification": "New reviewed public source/provenance/launch-hold notice."
+    }
+  ]
+}

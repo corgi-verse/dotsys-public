@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="title desc">
+  <title id="title">Dotsys: connect context, keep control</title>
+  <desc id="desc">Public descriptions, shared topics, and private personal context stay behind a user permission checkpoint. Only a separately approved next step proceeds. Discovery is separate from permission.</desc>
+  <rect width="1120" height="720" rx="28" fill="#fffaf0"/>
+  <rect x="1" y="1" width="1118" height="718" rx="27" fill="none" stroke="#ded5c5" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#23232f">
+    <text x="52" y="65" font-size="17" font-weight="700" letter-spacing="2">CONNECT CONTEXT. KEEP CONTROL.</text>
+    <text x="52" y="109" font-size="25">Discovery is separate from permission.</text>
+  </g>
+  <g fill="none" stroke-width="28" stroke-linecap="round">
+    <path d="M85 226H253C348 226 346 343 440 343" stroke="#fb862d"/>
+    <path d="M85 370H440" stroke="#23232f"/>
+    <path d="M85 514H253C348 514 346 397 440 397" stroke="#619b8a"/>
+    <path d="M680 370H1015" stroke="#fb862d"/>
+  </g>
+  <g fill="#fffaf0" stroke="#23232f" stroke-width="3">
+    <circle cx="85" cy="226" r="13"/><circle cx="85" cy="370" r="13"/><circle cx="85" cy="514" r="13"/>
+    <circle cx="1015" cy="370" r="13"/>
+  </g>
+  <rect x="430" y="244" width="260" height="252" rx="26" fill="#23232f"/>
+  <path d="M560 278l38 15v31c0 27-18 46-38 55-20-9-38-28-38-55v-31z" fill="#fb862d"/>
+  <path d="m543 326 12 12 25-29" stroke="#23232f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#23232f">
+    <text x="66" y="280">Public description</text>
+    <text x="66" y="424">Shared topics</text>
+    <text x="66" y="568">Personal context</text>
+    <text x="66" y="598" fill="#62635f" font-size="18">Private by default</text>
+    <text x="851" y="424" text-anchor="middle">Approved next step</text>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#fffaf0" text-anchor="middle"><text x="560" y="419" font-size="23" font-weight="700">YOUR PERMISSION</text><text x="560" y="455" font-size="18">Separate. Scoped. Local.</text></g>
+  <path d="M52 646H1068" stroke="#ded5c5" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#62635f" font-size="16"><text x="52" y="683">DOTSYS / BY CORGI-VERSE</text><text x="1068" y="683" text-anchor="end">YOUR SYSTEM. YOUR SAY.</text></g>
+</svg>
