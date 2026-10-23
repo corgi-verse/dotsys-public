@@ -43,7 +43,7 @@ License: repository LICENSE and NOTICE. Image provenance and exact generation/ed
 
 ## 1.1 metadata and review integrity
 
-New briefs require image_description: a truthful description of the selected image without hardcoded example content. The renderer validates it and adds the selected chair upholstery to the image alt text. Width/height come from validated PNG IHDR dimensions, including its CRC and bounded dimensions. This validates metadata, not every compressed image pixel. The renderer does not generate or edit images; those steps require the actual supported host image tool and visual inspection.
+New briefs require image_description: a truthful description of the selected image without hardcoded example content. The renderer validates and escapes it as the complete image alt text. The optional literal token {chair_upholstery} substitutes the validated selected color name; unrelated descriptions receive no hardcoded room or chair text. Width/height come from validated PNG IHDR dimensions, including its CRC and bounded dimensions. This validates metadata, not every compressed image pixel. The renderer does not generate or edit images; those steps require the actual supported host image tool and visual inspection.
 
 Legacy 1.0 folders can still be hash-reopened. A controlled 1.1 variation needs a 1.1 parent; create a new migrated direction with the original credit before varying it. Old artifacts remain in Git history.
 

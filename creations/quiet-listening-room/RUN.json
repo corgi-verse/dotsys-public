@@ -7,7 +7,7 @@
     "revision": 1,
     "tool": "visual-concept-kit@1.1.0",
     "files": {
-      "brief.json": "73eccaaf7f8f92c9b57513151dfc8c1f326648c5e879f6813609db2879188a95",
+      "brief.json": "06576c29b6fb9623dc2b96045fc0f7810acf9bc0989b421fde4fecbcfa222ff6",
       "brief.md": "8fb850ef988630480795bcac35a4d398a366c547916d0460200a6416ce3f129f",
       "concept.png": "90cdff6d66a7c42e19e8c82f4fc6f1dafe0747f9a066643d07bd7c0e87f3089a",
       "sheet.css": "92894867e55ef4dfaf9e6643a3b59f02ecb01564bbcd821584674f5506be52ef",
@@ -21,7 +21,7 @@
     "revision": 2,
     "tool": "visual-concept-kit@1.1.0",
     "files": {
-      "brief.json": "4be5d2cf0af1452c4ddac36154efd8ce92cd4939e47c32d3b08beb05af6ff134",
+      "brief.json": "be2c8971bb5b9a8d69ca205e95b84e984e6ea46dd30a5a9094eac4c977c18fe9",
       "brief.md": "911703a818a5cb4644d415ceceacaf0a69134158c31d168376cce05a62f40cc0",
       "concept.png": "62fec699e0cfce77229c3c53d5edbf72305f01e42b6b75a8d1b7ac55690b5f68",
       "sheet.css": "a4cf3e1420210f2381adcf19dd6f753440100b38bdc5d82301be6fe29fa829bf",
@@ -30,7 +30,7 @@
     "parent": {
       "id": "quiet-listening-room",
       "revision": 1,
-      "manifest_sha256": "a85a72258924752ac9e61dea254bae5fdf30e6314f63e4bdd8210bd4e185cd8f"
+      "manifest_sha256": "b83ae5205704c9faabb0860733a2058d5b13e9ac23f87c31e2dc90fd8b6b8316"
     }
   },
   "image_execution": "Original built-in image generation/edit retained byte-for-byte from 1.0 run. The offline renderer neither generates nor edits images.",

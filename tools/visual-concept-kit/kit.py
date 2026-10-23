@@ -149,10 +149,11 @@ def build(brief_path, image, output, parent=None, change=None):
     swatches = "".join(f'<li><span class="swatch s{i}" aria-hidden="true"></span><strong>{text(p["name"])}</strong><code>{p["color"].upper()}</code><small>{text(p["role"])}</small></li>' for i, p in enumerate(palette))
     sources = "".join(f'<li><a href="{html.escape(s["url"], quote=True)}">{text(s["title"])}</a> — {text(s["credit"])}. {text(s["rights"])}</li>' for s in brief["sources"])
     lineage_text = f'Revision {revision} · ' + ("Controlled variation: chair upholstery only" if parent else "Original direction")
+    image_alt = text(brief["image_description"].replace("{chair_upholstery}", brief["chair_upholstery"]["name"]))
     sheet = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{text(brief["title"])} · Direction sheet</title><link rel="stylesheet" href="sheet.css"></head><body>
 <a class="skip" href="#main">Skip to direction</a><main id="main"><header><p class="eyebrow">DOTSYS / VISUAL CONCEPT KIT / 01</p><h1>{text(brief["title"])}</h1><p class="intent">{text(brief["intent"])}</p><p class="meta">{lineage_text}</p></header>
-<figure><img src="concept.png" width="{width}" height="{height}" alt="{text(brief["image_description"])} Chair upholstery: {text(brief["chair_upholstery"]["name"])}."><figcaption>Visual hypothesis · {" / ".join(text(x) for x in brief["qualities"])}</figcaption></figure>
+<figure><img src="concept.png" width="{width}" height="{height}" alt="{image_alt}"><figcaption>Visual hypothesis · {" / ".join(text(x) for x in brief["qualities"])}</figcaption></figure>
 <section class="palette"><h2>Color, with a purpose.</h2><ul>{swatches}</ul></section><div class="decisions">{sections}</div>
 <section class="sources"><h2>References &amp; authorship</h2><ul>{sources}</ul></section><footer><p>Concept direction only. Not a built interior, acoustic design or product endorsement.</p><nav aria-label="Editable files"><a href="brief.json" download>Editable brief (.json)</a><a href="brief.md" download>Readable brief (.md)</a><a href="manifest.json">Hashes &amp; parent credit</a></nav><p>{VERSION} · Save the whole folder, reopen sheet.html, verify with kit.py reopen.</p></footer></main></body></html>'''
     (output / "sheet.html").write_text(sheet)

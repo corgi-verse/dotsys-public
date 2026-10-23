@@ -81,6 +81,7 @@ class VisualKitTests(unittest.TestCase):
             self.assertIn('width="3" height="2"', output)
             self.assertIn('alt="A sunlit reading corner with a blue textile and &quot;oak&quot; chair.', output)
             self.assertNotIn("A quiet listening room", output)
+            self.assertNotIn("Chair upholstery:", output)
             self.assertEqual(kit.png_dimensions(image), (3, 2))
             broken = bytearray(png)
             broken[20] ^= 1
