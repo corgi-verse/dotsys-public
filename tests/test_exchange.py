@@ -29,6 +29,91 @@ class ExchangeTests(unittest.TestCase):
     def tearDown(self):
         self.temporary.cleanup()
 
+    def rebind_fixture(self, version, changed):
+        """Recompute test-fixture acceptance so stale hashes cannot mask closure bugs."""
+        path = self.root / ("creations/quiet-listening-room/" + version + "/submission.json")
+        record = exchange.read(path)
+        manifest_path = self.root / record["manifest"]
+        manifest = exchange.read(manifest_path)
+        manifest["files"][changed] = exchange.digest(manifest_path.parent / changed)
+        manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
+        record["package"] = {key: exchange.digest(self.root / key) for key in record["package"]}
+        path.write_text(json.dumps(record, indent=2) + "\n")
+        review_path = path.parent / "review.json"
+        review = exchange.read(review_path)
+        review["submission_sha256"] = exchange.digest(path)
+        review["package_sha256"] = exchange.package_digest(record["package"])
+        review_path.write_text(json.dumps(review, indent=2) + "\n")
+
+    def test_recomputed_acceptance_rejects_every_inline_css_form(self):
+        folder = self.root / "creations/quiet-listening-room/clay"
+        saved = {name: (folder / name).read_bytes() for name in ["sheet.html", "manifest.json", "submission.json", "review.json"]}
+        extra = folder / "unreviewed.png"
+        extra.write_bytes(b"original uncovered local asset")
+        cases = [
+            '<div style="background:url(unreviewed.png)">x</div>',
+            '<DIV StYlE="background:URL(https://example.com/remote.png)">x</DIV>',
+            '<div style="background&#58;url&#40;unreviewed%2Epng&#41;">x</div>',
+            r'<div style="background:u\72l(unreviewed.png)">x</div>',
+            '<div style>x</div>',
+            '<style>body{background:url(unreviewed.png)}</style>',
+            '<STYLE media="print">@IMPORT "https://example.com/remote.css";</STYLE>',
+            r'<style>body{background:u\000072l(unreviewed.png)}</style>',
+            r'<style>@\69mport "remote.css";</style>',
+            '<style>body{background:u/**/rl(unreviewed.png)}</style>',
+            '<svg><style>rect{fill:url(unreviewed.png)}</style></svg>',
+            '<style/>',
+        ]
+        for payload in cases:
+            with self.subTest(payload=payload):
+                for name, data in saved.items():
+                    (folder / name).write_bytes(data)
+                (folder / "sheet.html").write_bytes(saved["sheet.html"].replace(b"</body>", payload.encode() + b"</body>"))
+                self.rebind_fixture("clay", "sheet.html")
+                with self.assertRaisesRegex(ValueError, "Inline CSS"):
+                    exchange.registry(self.root)
+                extra.write_bytes(b"changed uncovered asset")
+                with self.assertRaisesRegex(ValueError, "Inline CSS"):
+                    exchange.registry(self.root)
+        for name, data in saved.items():
+            (folder / name).write_bytes(data)
+        self.assertEqual(len(exchange.registry(self.root)), 2)
+
+    def test_recomputed_acceptance_rejects_unsupported_stylesheet_resource_syntax(self):
+        folder = self.root / "creations/quiet-listening-room/clay"
+        saved = {name: (folder / name).read_bytes() for name in ["sheet.css", "manifest.json", "submission.json", "review.json"]}
+        cases = [
+            'body{background:url(unreviewed.png)}',
+            'body{background:URL("unreviewed space.png")}',
+            'body{background:url(unreviewed%2Epng)}',
+            '@IMPORT "https://example.com/remote.css";',
+            r'body{background:u\72l(unreviewed.png)}',
+            r'@\69mport "remote.css";',
+            r'body{background:url(\75nreviewed.png)}',
+            'body{background:u/**/rl(unreviewed.png)}',
+            'body{background:image-set("unreviewed.png" 1x)}',
+            'body{background:-webkit-image-set("unreviewed.png" 1x)}',
+        ]
+        for payload in cases:
+            with self.subTest(payload=payload):
+                for name, data in saved.items():
+                    (folder / name).write_bytes(data)
+                (folder / "sheet.css").write_text(payload)
+                self.rebind_fixture("clay", "sheet.css")
+                with self.assertRaisesRegex(ValueError, "Unsupported CSS"):
+                    exchange.registry(self.root)
+        for name, data in saved.items():
+            (folder / name).write_bytes(data)
+        self.assertEqual(len(exchange.registry(self.root)), 2)
+
+    def test_stylesheet_content_role_and_extension_case_cannot_skip_checks(self):
+        for name in ["theme.CSS", "theme", "theme.html"]:
+            with self.subTest(name=name):
+                (self.root / name).write_text('body{background:URL(unreviewed.png)}')
+                (self.root / "linked.html").write_text('<link rel="StyleSheet" href="' + name + '">')
+                with self.assertRaisesRegex(ValueError, "Unsupported CSS"):
+                    exchange.linked_files(self.root, "linked.html")
+
     def test_registry_has_real_original_and_credited_adaptation(self):
         records = exchange.registry(ROOT)
         self.assertEqual(records["quiet-listening-room-clay"]["parent"], "quiet-listening-room-jade")

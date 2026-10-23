@@ -60,26 +60,46 @@ class Links(HTMLParser):
         self.references = []
 
     def handle_starttag(self, tag, attrs):
+        # The renderer emits external CSS only. Reject the entire unsupported
+        # inline surface, irrespective of encoded values, casing or media type.
+        if tag == "style" or any(key == "style" for key, _ in attrs):
+            raise ValueError("Inline CSS is unsupported; use the declared static stylesheet")
+        stylesheet = tag == "link" and any(key == "rel" and value and "stylesheet" in value.lower().split() for key, value in attrs)
         for key, value in attrs:
             if key in {"src", "href", "poster", "data"} and value:
-                self.references.append((value, tag == "a" and key == "href"))
+                self.references.append((value, tag == "a" and key == "href", stylesheet and key == "href"))
             elif key == "srcset" and value:
-                self.references.extend((item.strip().split()[0], False) for item in value.split(","))
+                self.references.extend((item.strip().split()[0], False, False) for item in value.split(",") if item.strip())
+
+
+def static_css(source):
+    """Accept the renderer's bounded, resource-free CSS dialect, not arbitrary CSS.
+
+    A regex URL extractor cannot cover CSS tokenization/escapes. This adapter
+    therefore rejects those forms instead of claiming they were fully parsed.
+    The actual generated sheets need no CSS-loaded images, fonts or imports.
+    """
+    if "\\" in source or "/*" in source or "*/" in source or any(ord(char) < 32 and char not in "\n\r\t" for char in source):
+        raise ValueError("Unsupported CSS escapes, comments or control characters")
+    if any(rule.lower() != "media" for rule in re.findall(r"@\s*([^\s({;]+)", source)):
+        raise ValueError("Unsupported CSS at-rule; imports and resource declarations are not allowed")
+    allowed = {"media", "clamp", "min", "max", "calc", "var", "rgb", "rgba", "hsl", "hsla", "linear-gradient", "radial-gradient", "repeating-linear-gradient", "repeating-radial-gradient", "repeat", "minmax"}
+    for function in re.findall(r"([\w-]+)\s*\(", source):
+        if function.lower() not in allowed:
+            raise ValueError("Unsupported CSS function/resource form: " + function)
 
 
 def linked_files(root, relative):
     path = file(root, relative)
     references = []
-    if path.suffix == ".html":
+    if path.suffix.lower() == ".html":
         parser = Links()
         parser.feed(path.read_text())
         references = parser.references
-    elif path.suffix == ".css":
-        source = path.read_text()
-        references = [(match, False) for match in re.findall(r"url\(\s*['\"]?([^'\")\s]+)['\"]?\s*\)", source)]
-        references += [(match, False) for match in re.findall(r"@import\s+['\"]([^'\"]+)['\"]", source)]
+    elif path.suffix.lower() == ".css":
+        static_css(path.read_text())
     found = set()
-    for value, navigation in references:
+    for value, navigation, stylesheet in references:
         url = urlsplit(value)
         if url.scheme or url.netloc:
             if not (navigation and url.scheme == "https" and url.netloc and not url.username and not url.password):
@@ -89,7 +109,9 @@ def linked_files(root, relative):
             continue
         decoded = unquote(url.path)
         target = (Path(relative).parent / decoded).as_posix()
-        file(root, target)
+        dependency = file(root, target)
+        if stylesheet:
+            static_css(dependency.read_text())  # Content role, not filename, selects CSS checks.
         found.add(target)
     return found
 

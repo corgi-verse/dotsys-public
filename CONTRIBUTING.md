@@ -32,3 +32,9 @@ Specific creative artifacts and the repeatable processes that made them now belo
 5. Only accepted entries are added to `creations/registry.json` and the discovery index. Run `python3 tools/validate_exchange.py`; preserve parent links and licenses, then merge through the normal review workflow. The website's curated list is updated deliberately with the accepted revision. An issue or PR alone is not acceptance, installation or website deployment.
 
 The two launch entries are owner-directed seed work, including an actual controlled adaptation. They demonstrate the mechanism; they do not establish a thriving community or independent adoption. Maintainers may ask for changes or decline an entry with a reason. No automatic scraper, account connection or private-record import exists.
+
+### Supported visual-kit stylesheet format
+
+The current visual-kit adapter accepts the renderer's passive HTML and declared external stylesheet. Inline `style` attributes and `<style>` blocks are rejected in every case, including empty attributes, mixed casing, HTML-encoded values and CSS escapes. The validator does not pretend to parse arbitrary embedded CSS.
+
+External CSS is a bounded resource-free dialect: `@media`, ordinary declarations and the documented static layout/color functions used by the renderer. CSS imports, `url`, image/resource functions, escapes, comments, control characters and unsupported at-rules/functions are rejected rather than partially scanned. Put the image in its declared HTML `img src`; do not hide assets in CSS. Stylesheet-role links are checked as CSS regardless of extension/casing. The generated sheets remain supported without any file changes; a different CSS dialect requires a reviewed adapter extension. Validation reads local bytes only and never fetches references.
