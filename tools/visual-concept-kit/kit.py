@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Visual Concept Kit 1.0.0. Standard-library renderer for a dot/Codex workflow."""
+"""Visual Concept Kit 1.1.0. Standard-library renderer for a dot/Codex workflow."""
 import argparse
 import hashlib
 import html
@@ -7,10 +7,12 @@ import json
 from pathlib import Path
 import re
 import shutil
+import struct
 import sys
+import zlib
 
-VERSION = "visual-concept-kit@1.0.0"
-KEYS = {"id", "title", "intent", "qualities", "palette", "materials", "lighting", "locked", "chair_upholstery", "sources"}
+VERSION = "visual-concept-kit@1.1.0"
+KEYS = {"id", "title", "intent", "image_description", "qualities", "palette", "materials", "lighting", "locked", "chair_upholstery", "sources"}
 
 
 def digest(path):
@@ -36,12 +38,13 @@ def text(value):
     return html.escape(value)
 
 
-def validate(brief):
-    if not isinstance(brief, dict) or set(brief) != KEYS:
+def validate(brief, legacy=False):
+    expected = KEYS - {"image_description"} if legacy else KEYS
+    if not isinstance(brief, dict) or set(brief) != expected:
         raise ValueError("Unsupported brief fields")
     if not re.fullmatch(r"[a-z][a-z0-9-]{2,63}", brief["id"]):
         raise ValueError("Invalid id")
-    for key in ("title", "intent"):
+    for key in (("title", "intent") if legacy else ("title", "intent", "image_description")):
         text(brief[key])
     for key in ("qualities", "materials", "lighting", "locked"):
         if not isinstance(brief[key], list) or not 1 <= len(brief[key]) <= 12:
@@ -67,17 +70,35 @@ def validate(brief):
 
 
 def local_file(root, relative):
-    if not isinstance(relative, str) or not relative or Path(relative).is_absolute() or ".." in Path(relative).parts:
+    if not isinstance(relative, str) or not relative or "\\" in relative or "\x00" in relative or Path(relative).is_absolute() or ".." in Path(relative).parts or Path(relative).as_posix() != relative:
         raise ValueError("Unsafe relative path")
     path = root / relative
+    current = root
+    for part in Path(relative).parts:
+        current = current / part
+        if current.is_symlink():
+            raise ValueError("Unsafe symlink path")
     if path.is_symlink() or not path.is_file() or not path.resolve().is_relative_to(root.resolve()):
         raise ValueError("Missing file or unsafe symlink: " + relative)
     return path
 
 
+def png_dimensions(path):
+    if path.stat().st_size > 25_000_000:
+        raise ValueError("Provide a PNG concept image under 25 MB")
+    with path.open("rb") as stream:
+        header = stream.read(33)
+    if len(header) != 33 or header[:16] != b"\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR" or zlib.crc32(header[12:29]) != int.from_bytes(header[29:33], "big"):
+        raise ValueError("Missing or invalid PNG IHDR metadata")
+    width, height = struct.unpack(">II", header[16:24])
+    if not 1 <= width <= 32768 or not 1 <= height <= 32768 or width * height > 100_000_000:
+        raise ValueError("PNG dimensions outside supported bounds")
+    return width, height
+
+
 def reopen(root):
-    record = load(root / "manifest.json")
-    if set(record) != {"schema", "tool", "id", "revision", "parent", "change", "files"} or record["schema"] != "dotsys.visual-kit/1" or record["tool"] != VERSION:
+    record = load(local_file(root, "manifest.json"))
+    if set(record) != {"schema", "tool", "id", "revision", "parent", "change", "files"} or record["schema"] != "dotsys.visual-kit/1" or record["tool"] not in {VERSION, "visual-concept-kit@1.0.0"}:
         raise ValueError("Unsupported manifest")
     if not isinstance(record["revision"], int) or record["revision"] < 1:
         raise ValueError("Invalid revision")
@@ -88,7 +109,8 @@ def reopen(root):
         if digest(local_file(root, relative)) != expected_hash:
             raise ValueError("Hash mismatch: " + relative)
     brief = load(root / "brief.json")
-    validate(brief)
+    validate(brief, legacy=record["tool"] == "visual-concept-kit@1.0.0")
+    png_dimensions(local_file(root, "concept.png"))
     if brief["id"] != record["id"]:
         raise ValueError("Identity mismatch")
     return record, brief
@@ -97,12 +119,13 @@ def reopen(root):
 def build(brief_path, image, output, parent=None, change=None):
     brief = load(brief_path)
     validate(brief)
-    if image.stat().st_size > 25_000_000 or image.read_bytes()[:8] != b"\x89PNG\r\n\x1a\n":
-        raise ValueError("Provide a PNG concept image under 25 MB")
+    width, height = png_dimensions(image)
     lineage = None
     revision = 1
     if parent:
         record, previous = reopen(parent)
+        if record["tool"] != VERSION:
+            raise ValueError("Migrate the legacy brief to an independent 1.1 direction before a controlled remix")
         changed = {key for key in brief if brief[key] != previous[key]}
         if change != "chair_upholstery" or changed != {change}:
             raise ValueError("Controlled remix must change only chair_upholstery")
@@ -126,10 +149,11 @@ def build(brief_path, image, output, parent=None, change=None):
     swatches = "".join(f'<li><span class="swatch s{i}" aria-hidden="true"></span><strong>{text(p["name"])}</strong><code>{p["color"].upper()}</code><small>{text(p["role"])}</small></li>' for i, p in enumerate(palette))
     sources = "".join(f'<li><a href="{html.escape(s["url"], quote=True)}">{text(s["title"])}</a> — {text(s["credit"])}. {text(s["rights"])}</li>' for s in brief["sources"])
     lineage_text = f'Revision {revision} · ' + ("Controlled variation: chair upholstery only" if parent else "Original direction")
+    image_alt = text(brief["image_description"].replace("{chair_upholstery}", brief["chair_upholstery"]["name"]))
     sheet = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{text(brief["title"])} · Direction sheet</title><link rel="stylesheet" href="sheet.css"></head><body>
 <a class="skip" href="#main">Skip to direction</a><main id="main"><header><p class="eyebrow">DOTSYS / VISUAL CONCEPT KIT / 01</p><h1>{text(brief["title"])}</h1><p class="intent">{text(brief["intent"])}</p><p class="meta">{lineage_text}</p></header>
-<figure><img src="concept.png" width="1536" height="1024" alt="A quiet listening room with an oak lounge chair, dark record cabinet, linen curtain and soft left daylight. Chair upholstery: {text(brief["chair_upholstery"]["name"])}."><figcaption>Visual hypothesis · {" / ".join(text(x) for x in brief["qualities"])}</figcaption></figure>
+<figure><img src="concept.png" width="{width}" height="{height}" alt="{image_alt}"><figcaption>Visual hypothesis · {" / ".join(text(x) for x in brief["qualities"])}</figcaption></figure>
 <section class="palette"><h2>Color, with a purpose.</h2><ul>{swatches}</ul></section><div class="decisions">{sections}</div>
 <section class="sources"><h2>References &amp; authorship</h2><ul>{sources}</ul></section><footer><p>Concept direction only. Not a built interior, acoustic design or product endorsement.</p><nav aria-label="Editable files"><a href="brief.json" download>Editable brief (.json)</a><a href="brief.md" download>Readable brief (.md)</a><a href="manifest.json">Hashes &amp; parent credit</a></nav><p>{VERSION} · Save the whole folder, reopen sheet.html, verify with kit.py reopen.</p></footer></main></body></html>'''
     (output / "sheet.html").write_text(sheet)

@@ -2,7 +2,7 @@
   "status": "accepted",
   "reviewer": "Codex maintainer workflow under owner-approved recovery",
   "date": "2026-10-23",
-  "scope": "Owner-directed seed artifact review; not independent human acceptance or community adoption. Images visually inspected; saved outputs reopened in desktop/mobile Chromium. Sources/rights and public content inspected.",
+  "scope": "Renewed Codex maintainer-agent review under approved recovery: full declared package, process/evidence and source inventory, exact submission metadata and curated parent binding. Same image bytes as the initial visually inspected run; 1.1 accessible metadata regenerated offline. Historical raw browser receipts preserved; no fresh 1.1 browser run, independent human acceptance or community adoption claimed.",
   "checks": {
     "rights": "PASS",
     "privacy": "PASS",
@@ -11,5 +11,7 @@
     "credit": "PASS",
     "recovery": "PASS"
   },
-  "artifact_sha256": "8ff082bf94513704d305fa3a507ce4aa5dac973c58435e4a6eed6f2d6745b001"
+  "schema": "dotsys.creation-review/2",
+  "submission_sha256": "2ee8b9c66b5812e934e01ae8f20b6c63ab1955db5a0c0d8ee9e09350bd805774",
+  "package_sha256": "1d063d59b62e65465be569aae7061c4565bdfb9664f8bf4c1597a9f96bee4aad"
 }

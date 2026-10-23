@@ -1,0 +1,98 @@
+{
+  "source_revision": "5005ef267e0e4f129ba81bb4683633bb9cd957fd",
+  "scope": "Exact tested source and package data; following receipt-only commit does not change these bytes.",
+  "commands": [
+    {
+      "command": [
+        "pinned-python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "skills/paste-inbox/scripts/test_paste_inbox.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/test_site_copy.cjs",
+        "tests/test_skill_copy.cjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/visual-concept-kit/kit.py",
+        "reopen",
+        "creations/quiet-listening-room/original"
+      ],
+      "exit_code": 0,
+      "output": "reopen-original.json"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/visual-concept-kit/kit.py",
+        "reopen",
+        "creations/quiet-listening-room/clay"
+      ],
+      "exit_code": 0,
+      "output": "reopen-clay.json"
+    }
+  ],
+  "command_selector_note": "pinned-python redacts the local absolute interpreter path only; command arguments and output are preserved. It selects the existing pinned validation environment.",
+  "pinned_python_packages": {
+    "jsonschema": "4.26.0",
+    "referencing": "0.37.0"
+  },
+  "covered_unique_files": 25,
+  "covered_files": [
+    "LICENSE",
+    "NOTICE",
+    "creations/quiet-listening-room/PROCESS.md",
+    "creations/quiet-listening-room/README.md",
+    "creations/quiet-listening-room/RUN-1.0.json",
+    "creations/quiet-listening-room/RUN.json",
+    "creations/quiet-listening-room/clay-input.json",
+    "creations/quiet-listening-room/clay/brief.json",
+    "creations/quiet-listening-room/clay/brief.md",
+    "creations/quiet-listening-room/clay/concept.png",
+    "creations/quiet-listening-room/clay/manifest.json",
+    "creations/quiet-listening-room/clay/sheet.css",
+    "creations/quiet-listening-room/clay/sheet.html",
+    "creations/quiet-listening-room/original-input.json",
+    "creations/quiet-listening-room/original/brief.json",
+    "creations/quiet-listening-room/original/brief.md",
+    "creations/quiet-listening-room/original/concept.png",
+    "creations/quiet-listening-room/original/manifest.json",
+    "creations/quiet-listening-room/original/sheet.css",
+    "creations/quiet-listening-room/original/sheet.html",
+    "tools/visual-concept-kit/README.md",
+    "tools/visual-concept-kit/SKILL.md",
+    "tools/visual-concept-kit/kit.py",
+    "verification/exchange/initial-catalog-browser.json",
+    "verification/exchange/initial-kit-browser.json"
+  ],
+  "source_files": {
+    "tools/validate_exchange.py": "2caf587355ccf293d27e05b9f8a3662dddbc67cb709e2463dc872ca27a9c380a",
+    "tools/visual-concept-kit/kit.py": "3876ca8941494244dab06681e28cbbd282641417b28e1b0f9c8ce054708d0168",
+    "tests/test_exchange.py": "de7b1462cbb07790e7b138acb46630d2ad8762f0cefb1da353eb235ca830bae0",
+    "tests/test_visual_kit.py": "b8ecad61129676532274b1ed9578fafd0b1ed1068b41523600ae10744878aba9"
+  },
+  "css_regressions": "12 inline CSS forms (also retried after undeclared local asset mutation), 10 external stylesheet resource/encoded/escaped forms, 3 stylesheet filename/role forms; fixture manifest/inventory/review recomputed before acceptance tests.",
+  "generated_output_changes": "None in inline-CSS correction; both real packages validate unchanged.",
+  "browser_1_1": "NOT_RUN: Gummy priority; raw prior 1.0 browser output retained separately.",
+  "ci": "No GitHub CI configured; no CI pass claimed.",
+  "independent_closure": "Pending; no merge authorized until independent closure."
+}

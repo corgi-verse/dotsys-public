@@ -1,0 +1,38 @@
+[
+  {
+    "device": "desktop",
+    "version": "original",
+    "reopened": true,
+    "noOverflow": true,
+    "imageLoaded": true,
+    "keyboardSkip": true,
+    "errors": []
+  },
+  {
+    "device": "desktop",
+    "version": "clay",
+    "reopened": true,
+    "noOverflow": true,
+    "imageLoaded": true,
+    "keyboardSkip": true,
+    "errors": []
+  },
+  {
+    "device": "mobile",
+    "version": "original",
+    "reopened": true,
+    "noOverflow": true,
+    "imageLoaded": true,
+    "keyboardSkip": true,
+    "errors": []
+  },
+  {
+    "device": "mobile",
+    "version": "clay",
+    "reopened": true,
+    "noOverflow": true,
+    "imageLoaded": true,
+    "keyboardSkip": true,
+    "errors": []
+  }
+]

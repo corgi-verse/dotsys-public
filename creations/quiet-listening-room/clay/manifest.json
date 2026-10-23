@@ -1,19 +1,19 @@
 {
   "schema": "dotsys.visual-kit/1",
-  "tool": "visual-concept-kit@1.0.0",
+  "tool": "visual-concept-kit@1.1.0",
   "id": "quiet-listening-room",
   "revision": 2,
   "parent": {
     "id": "quiet-listening-room",
     "revision": 1,
-    "manifest_sha256": "efec3ef8b23b1f4c91d408a124f0a50a585a9f4c5d89081c9b46ecdac20b85d0"
+    "manifest_sha256": "b83ae5205704c9faabb0860733a2058d5b13e9ac23f87c31e2dc90fd8b6b8316"
   },
   "change": "chair_upholstery",
   "files": {
-    "brief.json": "0fd4341b4489bdffffe0a482f3be6abfb2d18c856b9e497b119a1359ce55a7b9",
-    "brief.md": "af825bfd2b84816224172ab0e4c1fa18c6c7bd7b378c4ad9898ccc54c1790024",
+    "brief.json": "be2c8971bb5b9a8d69ca205e95b84e984e6ea46dd30a5a9094eac4c977c18fe9",
+    "brief.md": "911703a818a5cb4644d415ceceacaf0a69134158c31d168376cce05a62f40cc0",
     "concept.png": "62fec699e0cfce77229c3c53d5edbf72305f01e42b6b75a8d1b7ac55690b5f68",
     "sheet.css": "a4cf3e1420210f2381adcf19dd6f753440100b38bdc5d82301be6fe29fa829bf",
-    "sheet.html": "b73dc8bd823b22c7125be2d697f342d2bc6acc4e4c39f837476b20730ea58f58"
+    "sheet.html": "125a308dcd5241351600abd5c6640243f154fde0d3257603e23fc8aa41a23879"
   }
 }

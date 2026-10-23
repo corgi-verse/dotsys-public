@@ -1,0 +1,144 @@
+{
+  "base": "http://127.0.0.1:4193",
+  "results": [
+    {
+      "check": "catalog -> download -> supported Python execution -> actual output -> save/reopen -> controlled variation",
+      "result": "PASS",
+      "original": {
+        "verified": true,
+        "id": "quiet-listening-room",
+        "revision": 1,
+        "tool": "visual-concept-kit@1.0.0",
+        "files": {
+          "brief.json": "af95c1ef443be9a8ef2b74bdd5a02d03c3c9ca129799b0ffb16eab12c525a3fc",
+          "brief.md": "756564bbf0c305838bd2d6ad8b900c3bc7240158f3e914a112e90397661ef780",
+          "concept.png": "90cdff6d66a7c42e19e8c82f4fc6f1dafe0747f9a066643d07bd7c0e87f3089a",
+          "sheet.css": "92894867e55ef4dfaf9e6643a3b59f02ecb01564bbcd821584674f5506be52ef",
+          "sheet.html": "8ff082bf94513704d305fa3a507ce4aa5dac973c58435e4a6eed6f2d6745b001"
+        },
+        "parent": null
+      },
+      "variation": {
+        "verified": true,
+        "id": "quiet-listening-room",
+        "revision": 2,
+        "tool": "visual-concept-kit@1.0.0",
+        "files": {
+          "brief.json": "0fd4341b4489bdffffe0a482f3be6abfb2d18c856b9e497b119a1359ce55a7b9",
+          "brief.md": "af825bfd2b84816224172ab0e4c1fa18c6c7bd7b378c4ad9898ccc54c1790024",
+          "concept.png": "62fec699e0cfce77229c3c53d5edbf72305f01e42b6b75a8d1b7ac55690b5f68",
+          "sheet.css": "a4cf3e1420210f2381adcf19dd6f753440100b38bdc5d82301be6fe29fa829bf",
+          "sheet.html": "b73dc8bd823b22c7125be2d697f342d2bc6acc4e4c39f837476b20730ea58f58"
+        },
+        "parent": {
+          "id": "quiet-listening-room",
+          "revision": 1,
+          "manifest_sha256": "efec3ef8b23b1f4c91d408a124f0a50a585a9f4c5d89081c9b46ecdac20b85d0"
+        }
+      }
+    },
+    {
+      "route": "index.html",
+      "device": "desktop",
+      "result": "PASS",
+      "noOverflow": true,
+      "keyboardSkip": true
+    },
+    {
+      "route": "tools.html",
+      "device": "desktop",
+      "result": "PASS",
+      "noOverflow": true,
+      "keyboardSkip": true
+    },
+    {
+      "route": "concept-kit.html",
+      "device": "desktop",
+      "result": "PASS",
+      "noOverflow": true,
+      "keyboardSkip": true
+    },
+    {
+      "route": "creations.html",
+      "device": "desktop",
+      "result": "PASS",
+      "noOverflow": true,
+      "keyboardSkip": true
+    },
+    {
+      "route": "setup.html",
+      "device": "desktop",
+      "result": "PASS",
+      "noOverflow": true,
+      "keyboardSkip": true
+    },
+    {
+      "route": "docs.html",
+      "device": "desktop",
+      "result": "PASS",
+      "noOverflow": true,
+      "keyboardSkip": true
+    },
+    {
+      "route": "contribute.html",
+      "device": "desktop",
+      "result": "PASS",
+      "noOverflow": true,
+      "keyboardSkip": true
+    },
+    {
+      "route": "index.html",
+      "device": "mobile",
+      "result": "PASS",
+      "noOverflow": true,
+      "keyboardSkip": true
+    },
+    {
+      "route": "tools.html",
+      "device": "mobile",
+      "result": "PASS",
+      "noOverflow": true,
+      "keyboardSkip": true
+    },
+    {
+      "route": "concept-kit.html",
+      "device": "mobile",
+      "result": "PASS",
+      "noOverflow": true,
+      "keyboardSkip": true
+    },
+    {
+      "route": "creations.html",
+      "device": "mobile",
+      "result": "PASS",
+      "noOverflow": true,
+      "keyboardSkip": true
+    },
+    {
+      "route": "setup.html",
+      "device": "mobile",
+      "result": "PASS",
+      "noOverflow": true,
+      "keyboardSkip": true
+    },
+    {
+      "route": "docs.html",
+      "device": "mobile",
+      "result": "PASS",
+      "noOverflow": true,
+      "keyboardSkip": true
+    },
+    {
+      "route": "contribute.html",
+      "device": "mobile",
+      "result": "PASS",
+      "noOverflow": true,
+      "keyboardSkip": true
+    },
+    {
+      "check": "contextual brief download and clipboard fallback",
+      "result": "PASS"
+    }
+  ],
+  "errors": []
+}
