@@ -1,0 +1,68 @@
+{
+  "id": "quiet-listening-room",
+  "title": "A room for listening.",
+  "intent": "A quiet place to sit with one record, hear the small details, and let the rest of the day fall away.",
+  "qualities": [
+    "Quiet, without feeling empty",
+    "Tactile, without visual clutter",
+    "Attentive, with one clear focal point"
+  ],
+  "palette": [
+    {
+      "name": "Warm ivory",
+      "color": "#F4EBDD",
+      "role": "Mineral walls and quiet breathing room"
+    },
+    {
+      "name": "Ink blue",
+      "color": "#233B48",
+      "role": "Low cabinetry grounds the room"
+    },
+    {
+      "name": "Pale oak",
+      "color": "#C49D70",
+      "role": "Chair frame and warm open-pore timber"
+    },
+    {
+      "name": "Oatmeal",
+      "color": "#D8C6A8",
+      "role": "Linen and woven rug soften the edges"
+    }
+  ],
+  "materials": [
+    "Matte limewash plaster: subtle mineral variation, no high-gloss finish.",
+    "Open-pore oak chair frame and walnut speaker/turntable surfaces: legible grain.",
+    "Wool upholstery, sheer linen and a natural woven rug: soft, visible fibers.",
+    "A small clay vessel adds a quiet handmade note."
+  ],
+  "lighting": [
+    "Large left window, filtered by sheer linen; broad warm afternoon key.",
+    "Soft falloff across the plaster, with grounded contact shadows.",
+    "A small shaded lamp supports the record cabinet; avoid glare on the turntable."
+  ],
+  "locked": [
+    "Seated diagonal camera, generous unoccupied wall above the furniture.",
+    "One lounge chair, low record cabinet, turntable and two separate speakers.",
+    "Ink-blue cabinetry, warm plaster, timber, linen curtain, rug and vessel.",
+    "Keep the room scale, object positions and left light when making the chair variation."
+  ],
+  "chair_upholstery": {
+    "name": "Muted clay",
+    "color": "#B96D50",
+    "role": "Wool chair upholstery, the single variation point"
+  },
+  "sources": [
+    {
+      "title": "Original brief and process",
+      "url": "https://github.com/corgi-verse/dotsys-public/blob/main/creations/quiet-listening-room/PROCESS.md",
+      "credit": "Hayden Lindley / Corgi-Verse direction; executed with OpenAI Codex",
+      "rights": "Original written direction; repository LICENSE/NOTICE apply to covered material."
+    },
+    {
+      "title": "Original concept and controlled image edit",
+      "url": "https://github.com/corgi-verse/dotsys-public/tree/main/creations/quiet-listening-room",
+      "credit": "Built-in image tool, 2026-10-23; no exact model version exposed",
+      "rights": "AI-generated concept; no external image copied; no exclusive authorship or physical-feasibility claim."
+    }
+  ]
+}

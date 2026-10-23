@@ -1,0 +1,21 @@
+{
+  "schema": "dotsys.creation/1",
+  "id": "quiet-listening-room-jade",
+  "title": "A room for listening \u2014 jade original",
+  "author": "Hayden Lindley / Corgi-Verse, executed with OpenAI Codex",
+  "tool": "visual-concept-kit@1.0.0",
+  "artifact": "creations/quiet-listening-room/original/sheet.html",
+  "editable": "creations/quiet-listening-room/original/brief.json",
+  "process": "creations/quiet-listening-room/PROCESS.md",
+  "license": "LICENSE",
+  "sources": [
+    "Original owner-directed brief",
+    "Original built-in image generation; controlled edit of original for clay; see PROCESS.md"
+  ],
+  "parent": null,
+  "credits": [
+    "Hayden Lindley / Corgi-Verse, executed with OpenAI Codex"
+  ],
+  "artifact_sha256": "8ff082bf94513704d305fa3a507ce4aa5dac973c58435e4a6eed6f2d6745b001",
+  "use": "Download or clone the full artifact folder; open sheet.html; verify with kit.py reopen. Make a controlled chair variation using the documented host image edit and kit.py build --parent."
+}
