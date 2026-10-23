@@ -1,5 +1,5 @@
 {
-  "source_revision": "5066edb3fdc525ac46936311ef6acb8d9c437e81",
+  "source_revision": "f8d01be23b23fef4f2da0a312f8e9dbf7595c6b2",
   "scope": "Exact tested source and package data; following receipt-only commit does not change these bytes.",
   "commands": [
     {
@@ -51,6 +51,7 @@
       "output": "reopen-clay.json"
     }
   ],
+  "command_selector_note": "pinned-python redacts the local absolute interpreter path only; command arguments and output are preserved. It selects the existing pinned validation environment.",
   "pinned_python_packages": {
     "jsonschema": "4.26.0",
     "referencing": "0.37.0"
@@ -85,9 +86,9 @@
   ],
   "source_files": {
     "tools/validate_exchange.py": "b5686282ad1de827fe33fadf924e378682a348295b5021c02fb06ffdbeae3aae",
-    "tools/visual-concept-kit/kit.py": "f81eb3ea3b03488726e78270a4d30a3d0061fc8815013a0a25a2437e7589dd39",
+    "tools/visual-concept-kit/kit.py": "3876ca8941494244dab06681e28cbbd282641417b28e1b0f9c8ce054708d0168",
     "tests/test_exchange.py": "fd502c56963df2bea3725af88342a03e4b1b8a6eabd98a3e250e28e283bbd9f1",
-    "tests/test_visual_kit.py": "c21c71a55b511de07bb8fae10260e40fc09d016e127fcd0e799521f1cae78865"
+    "tests/test_visual_kit.py": "b8ecad61129676532274b1ed9578fafd0b1ed1068b41523600ae10744878aba9"
   },
   "browser_1_1": "NOT_RUN: Gummy priority; raw prior 1.0 browser output retained separately.",
   "ci": "No GitHub CI configured; no CI pass claimed."

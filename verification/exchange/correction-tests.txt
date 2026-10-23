@@ -76,7 +76,7 @@ test_saved_outputs_and_parent (test_visual_kit.VisualKitTests.test_saved_outputs
 test_untrusted_input_and_paths (test_visual_kit.VisualKitTests.test_untrusted_input_and_paths) ... ok
 
 ----------------------------------------------------------------------
-Ran 75 tests in 2.376s
+Ran 75 tests in 2.375s
 
 OK
 
@@ -96,15 +96,15 @@ test_symlink_and_traversal_rejected (__main__.CaptureTests.test_symlink_and_trav
 test_unicode_subject_fallback (__main__.CaptureTests.test_unicode_subject_fallback) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.074s
+Ran 11 tests in 0.072s
 
 OK
 
 Exit code: 0
 
 $ node --test tests/test_site_copy.cjs tests/test_skill_copy.cjs
-✔ tests/test_site_copy.cjs (63.941596ms)
-✔ tests/test_skill_copy.cjs (60.89172ms)
+✔ tests/test_site_copy.cjs (62.735931ms)
+✔ tests/test_skill_copy.cjs (59.703799ms)
 ℹ tests 2
 ℹ suites 0
 ℹ pass 2
@@ -112,6 +112,6 @@ $ node --test tests/test_site_copy.cjs tests/test_skill_copy.cjs
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 71.67473
+ℹ duration_ms 70.480619
 
 Exit code: 0
