@@ -1,0 +1,18 @@
+{
+  "verified": true,
+  "id": "quiet-listening-room",
+  "revision": 2,
+  "tool": "visual-concept-kit@1.1.0",
+  "files": {
+    "brief.json": "4be5d2cf0af1452c4ddac36154efd8ce92cd4939e47c32d3b08beb05af6ff134",
+    "brief.md": "911703a818a5cb4644d415ceceacaf0a69134158c31d168376cce05a62f40cc0",
+    "concept.png": "62fec699e0cfce77229c3c53d5edbf72305f01e42b6b75a8d1b7ac55690b5f68",
+    "sheet.css": "a4cf3e1420210f2381adcf19dd6f753440100b38bdc5d82301be6fe29fa829bf",
+    "sheet.html": "125a308dcd5241351600abd5c6640243f154fde0d3257603e23fc8aa41a23879"
+  },
+  "parent": {
+    "id": "quiet-listening-room",
+    "revision": 1,
+    "manifest_sha256": "a85a72258924752ac9e61dea254bae5fdf30e6314f63e4bdd8210bd4e185cd8f"
+  }
+}

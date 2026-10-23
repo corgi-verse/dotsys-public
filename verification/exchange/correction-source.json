@@ -1,0 +1,94 @@
+{
+  "source_revision": "5066edb3fdc525ac46936311ef6acb8d9c437e81",
+  "scope": "Exact tested source and package data; following receipt-only commit does not change these bytes.",
+  "commands": [
+    {
+      "command": [
+        "pinned-python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "skills/paste-inbox/scripts/test_paste_inbox.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/test_site_copy.cjs",
+        "tests/test_skill_copy.cjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/visual-concept-kit/kit.py",
+        "reopen",
+        "creations/quiet-listening-room/original"
+      ],
+      "exit_code": 0,
+      "output": "reopen-original.json"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/visual-concept-kit/kit.py",
+        "reopen",
+        "creations/quiet-listening-room/clay"
+      ],
+      "exit_code": 0,
+      "output": "reopen-clay.json"
+    }
+  ],
+  "pinned_python_packages": {
+    "jsonschema": "4.26.0",
+    "referencing": "0.37.0"
+  },
+  "covered_unique_files": 25,
+  "covered_files": [
+    "LICENSE",
+    "NOTICE",
+    "creations/quiet-listening-room/PROCESS.md",
+    "creations/quiet-listening-room/README.md",
+    "creations/quiet-listening-room/RUN-1.0.json",
+    "creations/quiet-listening-room/RUN.json",
+    "creations/quiet-listening-room/clay-input.json",
+    "creations/quiet-listening-room/clay/brief.json",
+    "creations/quiet-listening-room/clay/brief.md",
+    "creations/quiet-listening-room/clay/concept.png",
+    "creations/quiet-listening-room/clay/manifest.json",
+    "creations/quiet-listening-room/clay/sheet.css",
+    "creations/quiet-listening-room/clay/sheet.html",
+    "creations/quiet-listening-room/original-input.json",
+    "creations/quiet-listening-room/original/brief.json",
+    "creations/quiet-listening-room/original/brief.md",
+    "creations/quiet-listening-room/original/concept.png",
+    "creations/quiet-listening-room/original/manifest.json",
+    "creations/quiet-listening-room/original/sheet.css",
+    "creations/quiet-listening-room/original/sheet.html",
+    "tools/visual-concept-kit/README.md",
+    "tools/visual-concept-kit/SKILL.md",
+    "tools/visual-concept-kit/kit.py",
+    "verification/exchange/initial-catalog-browser.json",
+    "verification/exchange/initial-kit-browser.json"
+  ],
+  "source_files": {
+    "tools/validate_exchange.py": "b5686282ad1de827fe33fadf924e378682a348295b5021c02fb06ffdbeae3aae",
+    "tools/visual-concept-kit/kit.py": "f81eb3ea3b03488726e78270a4d30a3d0061fc8815013a0a25a2437e7589dd39",
+    "tests/test_exchange.py": "fd502c56963df2bea3725af88342a03e4b1b8a6eabd98a3e250e28e283bbd9f1",
+    "tests/test_visual_kit.py": "c21c71a55b511de07bb8fae10260e40fc09d016e127fcd0e799521f1cae78865"
+  },
+  "browser_1_1": "NOT_RUN: Gummy priority; raw prior 1.0 browser output retained separately.",
+  "ci": "No GitHub CI configured; no CI pass claimed."
+}
