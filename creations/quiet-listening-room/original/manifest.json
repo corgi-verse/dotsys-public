@@ -1,0 +1,15 @@
+{
+  "schema": "dotsys.visual-kit/1",
+  "tool": "visual-concept-kit@1.0.0",
+  "id": "quiet-listening-room",
+  "revision": 1,
+  "parent": null,
+  "change": null,
+  "files": {
+    "brief.json": "af95c1ef443be9a8ef2b74bdd5a02d03c3c9ca129799b0ffb16eab12c525a3fc",
+    "brief.md": "756564bbf0c305838bd2d6ad8b900c3bc7240158f3e914a112e90397661ef780",
+    "concept.png": "90cdff6d66a7c42e19e8c82f4fc6f1dafe0747f9a066643d07bd7c0e87f3089a",
+    "sheet.css": "92894867e55ef4dfaf9e6643a3b59f02ecb01564bbcd821584674f5506be52ef",
+    "sheet.html": "8ff082bf94513704d305fa3a507ce4aa5dac973c58435e4a6eed6f2d6745b001"
+  }
+}

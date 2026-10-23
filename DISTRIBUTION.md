@@ -1,5 +1,13 @@
 # Public source distribution
 
+## Current extension — 2026-10-23
+
+The approved DotSys recovery adds an original Visual Concept Kit renderer, actual quiet listening room artifacts and a curated contribution/remix workflow to this existing public distribution. New material is reviewed for public distribution; private repository history, records, drafts and machine receipts are not imported. See creations/README.md, CONTRIBUTING.md and tools/visual-concept-kit/README.md for current use, actual host boundaries, credit and limitations.
+
+The historical SOURCE-MANIFEST.json below records the initial export only. It is retained unchanged as provenance, not presented as an integrity manifest for later additions. Each new visual artifact has its own file hashes, parent manifest and process credit. The legacy buildless website is an archive; the current product website is maintained separately. This extension does not enable GitHub Pages or change hosting/security/DNS settings.
+
+## Initial export (preserved history)
+
 This is a reviewed source-only distribution of the legacy DotSys 0.1.0 protocol and buildless site from source revision `1a96e99a696878a099f6a9b78d48985ec6860ae8`. It uses one new root commit; no upstream Git history, branches or pull requests are imported. The source revision identifies reviewed protocol/site provenance, not a private architecture proposal.
 
 Included scope: portable protocol, strict schemas, synthetic examples and empty opt-in directory; setup/naming/handshake/documentation/security/verification guidance; offline reference tools and tests; original buildless landing and approved artwork; the existing bounded Paste Inbox source package; separately licensed CorgiPanels interoperability contract, structural validator and synthetic example. None supplies a hosted backend, connected account, working agent transport or execution grant.

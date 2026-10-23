@@ -1,0 +1,15 @@
+{
+  "status": "accepted",
+  "reviewer": "Codex maintainer workflow under owner-approved recovery",
+  "date": "2026-10-23",
+  "scope": "Owner-directed seed artifact review; not independent human acceptance or community adoption. Images visually inspected; saved outputs reopened in desktop/mobile Chromium. Sources/rights and public content inspected.",
+  "checks": {
+    "rights": "PASS",
+    "privacy": "PASS",
+    "actual_use": "PASS",
+    "editable_source": "PASS",
+    "credit": "PASS",
+    "recovery": "PASS"
+  },
+  "artifact_sha256": "8ff082bf94513704d305fa3a507ce4aa5dac973c58435e4a6eed6f2d6745b001"
+}

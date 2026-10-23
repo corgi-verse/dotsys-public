@@ -1,0 +1,13 @@
+{
+  "schema": "dotsys.exchange/1",
+  "entries": [
+    {
+      "submission": "creations/quiet-listening-room/original/submission.json",
+      "review": "creations/quiet-listening-room/original/review.json"
+    },
+    {
+      "submission": "creations/quiet-listening-room/clay/submission.json",
+      "review": "creations/quiet-listening-room/clay/review.json"
+    }
+  ]
+}
