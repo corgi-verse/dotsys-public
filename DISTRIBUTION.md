@@ -6,6 +6,10 @@ The approved DotSys recovery adds an original Visual Concept Kit renderer, actua
 
 The historical SOURCE-MANIFEST.json below records the initial export only. It is retained unchanged as provenance, not presented as an integrity manifest for later additions. Each new visual artifact has its own file hashes, parent manifest and process credit. The legacy buildless website is an archive; the current product website is maintained separately. This extension does not enable GitHub Pages or change hosting/security/DNS settings.
 
+## Small collection qualification — 2026-10-23
+
+Adds original Corgi Fetch and selected-source Project Radar browser packages, a dated public DotSys input snapshot, editable-source/recovery guides and actual Chromium receipts under verification/collection. The current Visual Concept Kit 1.1 catalog/download path has fresh execution/reopen/variation evidence; its underlying original and actual host-edited image bytes/provenance are preserved. Qualification uses desktop and emulated touch/landscape viewports; physical-device/Safari acceptance and independent community adoption are not claimed. Source qualification is separate from website publication and custom-domain acceptance. No hosting, account, provider, DNS or security setting is changed.
+
 ## Initial export (preserved history)
 
 This is a reviewed source-only distribution of the legacy DotSys 0.1.0 protocol and buildless site from source revision `1a96e99a696878a099f6a9b78d48985ec6860ae8`. It uses one new root commit; no upstream Git history, branches or pull requests are imported. The source revision identifies reviewed protocol/site provenance, not a private architecture proposal.
