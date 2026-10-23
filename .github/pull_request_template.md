@@ -13,7 +13,7 @@ Report the exact supported host, commands/user path, saved/reopened result and m
 ## Maintainer checklist
 
 - [ ] Run `python3 tools/validate_exchange.py --submission <path>`; inspect files without executing untrusted code.
-- [ ] Review rights, privacy, actual use, editable source, credit and recovery; record review against exact artifact hash.
+- [ ] Review rights, privacy, actual use, editable source, credit and recovery; bind the v2 review to the exact submission bytes and full declared package (manifest, image/brief/CSS, process/evidence, notices and tool source). Re-review after any change.
 - [ ] Preserve parent author/id credit and original license/notices.
 - [ ] Only after review, add submission + review receipt to creations/registry.json and discovery README; run `python3 tools/validate_exchange.py`.
 - [ ] Merge through normal repository workflow. A submission does not authorize deployment or external publication.

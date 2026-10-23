@@ -36,4 +36,4 @@ A quiet place to sit with one record, hear the small details, and let the rest o
 - Original concept and controlled image edit — https://github.com/corgi-verse/dotsys-public/tree/main/creations/quiet-listening-room; Built-in image tool, 2026-10-23; no exact model version exposed; AI-generated concept; no external image copied; no exclusive authorship or physical-feasibility claim.
 
 Concept hypothesis. Not a built room or acoustic specification.
-Produced with visual-concept-kit@1.0.0. Revision 1.
+Produced with visual-concept-kit@1.1.0. Revision 1.

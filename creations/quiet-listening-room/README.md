@@ -5,7 +5,7 @@ A quiet, tactile direction for one person and one record. Owner-directed launch 
 - [Original direction sheet](original/sheet.html), [editable brief](original/brief.json), [hash manifest](original/manifest.json).
 - [Clay chair adaptation](clay/sheet.html), [editable brief](clay/brief.json), [hash manifest and verified parent](clay/manifest.json).
 - [Actual generation/edit process and prompts](PROCESS.md), [run receipt](RUN.json).
-- Producing tool: [Visual Concept Kit 1.0.0](../../tools/visual-concept-kit/README.md).
+- Producing tool: [Visual Concept Kit 1.1.0](../../tools/visual-concept-kit/README.md).
 
 GitHub displays HTML source. Download/clone the folder and open sheet.html in a browser, or use the DotSys website's creation viewer. Keep all files together. The clay chair adaptation credits this original and changes only the named upholstery choice; it does not inherit an owner approval.
 

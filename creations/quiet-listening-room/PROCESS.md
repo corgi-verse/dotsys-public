@@ -23,3 +23,7 @@ Edit target: the attached quiet listening room image. Change exactly one selecte
 ## Rights and limitations
 
 Original AI-generated concept made for this project, with no supplied third-party image. No claim of exclusive copyright or physical feasibility is made. Original covered source/brief material follows the repository LICENSE/NOTICE; third-party rights remain with their holders. Keep this process credit with adaptations. Source/reference list is also embedded in each editable brief and direction sheet.
+
+## Integrity and accessible-metadata correction
+
+The initial 1.0.0 image execution and browser review above are preserved history. Version 1.1.0 regenerates the direction-sheet metadata from the validated image description and actual PNG dimensions using the exact same original/edited image bytes. No fresh image generation or edit is claimed by this offline renderer. New package acceptance binds all declared files and the exact submission, not just sheet.html. Current raw command receipts and historical browser output are recorded in verification/exchange/; browser revalidation of the new metadata remains separately marked.
