@@ -1,0 +1,56 @@
+{
+  "scope": "Actual catalog download/execution rows; private website metadata omitted. Source-update inputs are explicit test fixtures.",
+  "browserVersion": "151.0.7922.34",
+  "results": [
+    {
+      "tool": "corgi-fetch",
+      "route": "fetch.html",
+      "downloadedZipSha256": "f10727ec1bb5f2471823868065e6b82f45f3224fe006970cf83d3ad4f3123659",
+      "bundleSource": {
+        "schema": "dotsys.browser-tool-bundle/1",
+        "tool": "corgi-fetch@1.0.0",
+        "source_repository": "https://github.com/corgi-verse/dotsys-public",
+        "source_revision": "1b3a85c74e2c88d22ca109308b636b02417e44bc",
+        "files": {
+          "index.html": "30307e81680321c1e49fac8e3d16e68ba1323f84ac81375f8af0b4c109b26e97",
+          "game.css": "727cd732c3b70fc0173ad373551e52740185f7aa1e94b3d382916c11c904ccba",
+          "game.js": "40e11b57597d6fb1011d63dcad7c8e50875d1de28917459c45edb03474593778",
+          "README.md": "94fb01ac0b6d18fb116a75de6a037d82ae8dd75c5ce5f380e708f2ba2fe46940",
+          "LICENSE": "57ef4fa57afb5719f3995fc0c4e00247467691ec614204e37ae0e0e38a5e36d9",
+          "NOTICE": "6145b3539808e3ec30be2ff7746112eddfe5b67dacf48646c04195610853861c",
+          "QUALIFICATION.json": "5dd45c2e20b66481c921942a8a4fa17a0510b4b803a903318f6e9d9fc4669582"
+        }
+      },
+      "actualDownloadedExecution": true,
+      "sourceModified": true,
+      "reopened": true,
+      "result": "PASS"
+    },
+    {
+      "tool": "project-radar",
+      "route": "radar.html",
+      "downloadedZipSha256": "1c78235912caa2ec459ecc011d9fa697f151fde22d9599aa496f00df435dbe62",
+      "bundleSource": {
+        "schema": "dotsys.browser-tool-bundle/1",
+        "tool": "project-radar@1.0.0",
+        "source_repository": "https://github.com/corgi-verse/dotsys-public",
+        "source_revision": "1b3a85c74e2c88d22ca109308b636b02417e44bc",
+        "files": {
+          "index.html": "6a59ca65d36c67458d1ac169fc9b6dbea7a419d72b2b571b19404645cee92e6f",
+          "radar.css": "eb4065a6f172204c0dba82e4be37fb89641fcff457aca583d00f503669fb514c",
+          "radar.js": "e88bb986d7beb0d38435ce944bd6bf6c73c0bdb67f3912ef227e6a064b8417e7",
+          "sample.json": "45b33373f75ba25de0e27d27b66eae6aee5358b15cbf4a9203e81d200623babd",
+          "README.md": "e4b0002f9b1b959271a43a31e3f256771c6a77df4009b482727e82f07bc1940a",
+          "LICENSE": "57ef4fa57afb5719f3995fc0c4e00247467691ec614204e37ae0e0e38a5e36d9",
+          "NOTICE": "6145b3539808e3ec30be2ff7746112eddfe5b67dacf48646c04195610853861c",
+          "QUALIFICATION.json": "5dd45c2e20b66481c921942a8a4fa17a0510b4b803a903318f6e9d9fc4669582"
+        }
+      },
+      "actualDownloadedExecution": true,
+      "sourceModified": true,
+      "reopened": true,
+      "result": "PASS"
+    }
+  ],
+  "errors": []
+}

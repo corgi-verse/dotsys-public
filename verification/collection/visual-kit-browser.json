@@ -1,0 +1,44 @@
+{
+  "scope": "Actual artifact-execution row extracted from the machine-written website browser receipt; private website metadata omitted. No fresh image-generation/edit run is claimed.",
+  "public_product_revision": "ea31742a189b1e66609919381a6cdb3e45ba141b",
+  "browserVersion": "151.0.7922.34",
+  "execution": {
+    "check": "catalog -> download -> supported Python execution -> actual output -> save/reopen -> controlled variation",
+    "result": "PASS",
+    "tool": "visual-concept-kit@1.1.0",
+    "zipSha256": "2092ad0d68d8babd278ab5842d9123fef12cb02301069411d5c0d593f18aeb70",
+    "imageEdit": "Reused exact saved original and actual host-edited clay PNG; no fresh image generation claimed by the offline renderer.",
+    "original": {
+      "verified": true,
+      "id": "quiet-listening-room",
+      "revision": 1,
+      "tool": "visual-concept-kit@1.1.0",
+      "files": {
+        "brief.json": "06576c29b6fb9623dc2b96045fc0f7810acf9bc0989b421fde4fecbcfa222ff6",
+        "brief.md": "8fb850ef988630480795bcac35a4d398a366c547916d0460200a6416ce3f129f",
+        "concept.png": "90cdff6d66a7c42e19e8c82f4fc6f1dafe0747f9a066643d07bd7c0e87f3089a",
+        "sheet.css": "92894867e55ef4dfaf9e6643a3b59f02ecb01564bbcd821584674f5506be52ef",
+        "sheet.html": "82c90c45d273636c5d53e5a014753e49c4da149bdc8295c40afc1aacdc217fc2"
+      },
+      "parent": null
+    },
+    "variation": {
+      "verified": true,
+      "id": "quiet-listening-room",
+      "revision": 2,
+      "tool": "visual-concept-kit@1.1.0",
+      "files": {
+        "brief.json": "be2c8971bb5b9a8d69ca205e95b84e984e6ea46dd30a5a9094eac4c977c18fe9",
+        "brief.md": "911703a818a5cb4644d415ceceacaf0a69134158c31d168376cce05a62f40cc0",
+        "concept.png": "62fec699e0cfce77229c3c53d5edbf72305f01e42b6b75a8d1b7ac55690b5f68",
+        "sheet.css": "a4cf3e1420210f2381adcf19dd6f753440100b38bdc5d82301be6fe29fa829bf",
+        "sheet.html": "125a308dcd5241351600abd5c6640243f154fde0d3257603e23fc8aa41a23879"
+      },
+      "parent": {
+        "id": "quiet-listening-room",
+        "revision": 1,
+        "manifest_sha256": "b83ae5205704c9faabb0860733a2058d5b13e9ac23f87c31e2dc90fd8b6b8316"
+      }
+    }
+  }
+}

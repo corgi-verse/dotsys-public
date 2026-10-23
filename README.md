@@ -2,6 +2,8 @@
 
 # Your System for Dots.
 
+**Qualified source collection:** [Visual Concept Kit, Corgi Fetch, Project Radar and Paste Inbox](tools/README.md), with [actual browser/source receipts](verification/collection/README.md). Website publication remains a separate release step.
+
 **Current creative-tool recovery (2026-10-23):** [make and reopen a Visual Concept Kit](tools/visual-concept-kit/README.md), [inspect the real quiet listening room and clay-chair adaptation](creations/quiet-listening-room/README.md), or [submit a creation/remix for maintainer review](CONTRIBUTING.md#creation-and-remix-exchange). The current product preview is [DotSys on Vercel](https://dotsys.vercel.app/); custom-domain acceptance is separate. These owner-directed examples demonstrate the exchange mechanism, not community adoption. The protocol and initial-distribution notes below are preserved legacy documentation; see DISTRIBUTION.md for the current extension.
 
 **Public source distribution only.** This reviewed legacy protocol/site package has a new clean history. Website launch remains on hold; GitHub Pages and custom-domain hosting are not enabled. See [distribution provenance and modifications](DISTRIBUTION.md) and [source manifest](SOURCE-MANIFEST.json).

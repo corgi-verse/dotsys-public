@@ -1,0 +1,98 @@
+{
+  "sourceRevision": "1b3a85c74e2c88d22ca109308b636b02417e44bc",
+  "sourceFiles": {
+    "tools/corgi-fetch/README.md": "94fb01ac0b6d18fb116a75de6a037d82ae8dd75c5ce5f380e708f2ba2fe46940",
+    "tools/corgi-fetch/game.css": "727cd732c3b70fc0173ad373551e52740185f7aa1e94b3d382916c11c904ccba",
+    "tools/corgi-fetch/game.js": "40e11b57597d6fb1011d63dcad7c8e50875d1de28917459c45edb03474593778",
+    "tools/corgi-fetch/index.html": "30307e81680321c1e49fac8e3d16e68ba1323f84ac81375f8af0b4c109b26e97",
+    "tools/project-radar/README.md": "e4b0002f9b1b959271a43a31e3f256771c6a77df4009b482727e82f07bc1940a",
+    "tools/project-radar/index.html": "6a59ca65d36c67458d1ac169fc9b6dbea7a419d72b2b571b19404645cee92e6f",
+    "tools/project-radar/radar.css": "eb4065a6f172204c0dba82e4be37fb89641fcff457aca583d00f503669fb514c",
+    "tools/project-radar/radar.js": "e88bb986d7beb0d38435ce944bd6bf6c73c0bdb67f3912ef227e6a064b8417e7",
+    "tools/project-radar/sample.json": "45b33373f75ba25de0e27d27b66eae6aee5358b15cbf4a9203e81d200623babd"
+  },
+  "browserVersion": "151.0.7922.34",
+  "base": "http://127.0.0.1:4317",
+  "results": [
+    {
+      "candidate": "Corgi Fetch",
+      "device": "desktop",
+      "keyboardEnterAndSpace": true,
+      "repeatGuard": true,
+      "pointerOrTouchThrow": true,
+      "retrieveAndReplay": true,
+      "inflightResetAndEscape": true,
+      "reducedMotion": true,
+      "noOverflow": true
+    },
+    {
+      "candidate": "Corgi Fetch",
+      "device": "mobile",
+      "keyboardEnterAndSpace": true,
+      "repeatGuard": true,
+      "pointerOrTouchThrow": true,
+      "retrieveAndReplay": true,
+      "inflightResetAndEscape": true,
+      "reducedMotion": true,
+      "noOverflow": true
+    },
+    {
+      "candidate": "Corgi Fetch",
+      "device": "mobile-landscape",
+      "keyboardEnterAndSpace": true,
+      "repeatGuard": true,
+      "pointerOrTouchThrow": true,
+      "retrieveAndReplay": true,
+      "inflightResetAndEscape": true,
+      "reducedMotion": true,
+      "noOverflow": true
+    },
+    {
+      "candidate": "Corgi Fetch",
+      "sourceOpenedModifiedPlayedAndReopened": true,
+      "modifiedHtmlSha256": "663b1251c630ee428f3108306f39ecdff67e150920015a06f476fe834671b513"
+    },
+    {
+      "candidate": "Project Radar",
+      "device": "desktop",
+      "selectedSource": true,
+      "changedSourceRefresh": true,
+      "changedProjectRefresh": true,
+      "evidenceDelta": true,
+      "wrongVersionExplanation": true,
+      "savedAndReopened": true,
+      "invalidJsonSchemaDateUrlSizeRecovery": true,
+      "inertSourceText": true,
+      "noOverflow": true
+    },
+    {
+      "candidate": "Project Radar",
+      "device": "mobile",
+      "selectedSource": true,
+      "changedSourceRefresh": true,
+      "changedProjectRefresh": true,
+      "evidenceDelta": true,
+      "wrongVersionExplanation": true,
+      "savedAndReopened": true,
+      "invalidJsonSchemaDateUrlSizeRecovery": true,
+      "inertSourceText": true,
+      "noOverflow": true
+    },
+    {
+      "candidate": "Project Radar",
+      "device": "mobile-landscape",
+      "selectedSource": true,
+      "changedSourceRefresh": true,
+      "changedProjectRefresh": true,
+      "evidenceDelta": true,
+      "wrongVersionExplanation": true,
+      "savedAndReopened": true,
+      "invalidJsonSchemaDateUrlSizeRecovery": true,
+      "inertSourceText": true,
+      "noOverflow": true
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "note": "Chromium desktop and emulated mobile/touch viewports; physical phone/Safari checks are NOT_RUN. Source-update rows are explicit browser test fixtures, not production completion claims."
+}

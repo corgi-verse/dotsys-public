@@ -1,0 +1,7 @@
+# Corgi Fetch 1.0.0
+
+A small editable game for a dot-assisted creative project. Open index.html in a modern browser. Throw using the button (Enter/Space) or tap/click a spot in the garden; the corgi fetches and returns the ball. Play again, or Reset/Escape to recover at any point. Reduced motion uses a short state transition instead of a long run.
+
+Source: original inline SVG dog/garden in index.html, CSS palette/layout in game.css, timing and behavior in game.js. Change one color or timing value with your dot/Codex, reopen the saved files, and test throw/retrieve/replay again. Keep the root LICENSE/NOTICE with copies. No downloaded artwork, external dependencies, network calls, account or browser persistence.
+
+Input example: “Make a calm garden fetch game. The corgi retrieves the ball and we can play again. Keep the source editable.” Qualification: actual Chromium checks cover desktop, emulated mobile/touch and landscape; keyboard Enter/Space, throw/retrieve/replay, repeated-input guard, Reset/Escape and reduced motion. A copied source was recolored, played and reopened. Physical phone/Safari checks are not claimed. Exact source hashes and machine-written results are in verification/collection/. If a browser blocks local scripts, use a supported loopback static preview; do not change security settings. If JavaScript is unavailable, the illustration remains visible but the game is not playable.

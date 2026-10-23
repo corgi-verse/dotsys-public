@@ -1,0 +1,66 @@
+{
+  "browserVersion": "151.0.7922.34",
+  "rows": [
+    {
+      "version": "original",
+      "device": "desktop",
+      "info": {
+        "alt": "A quiet listening room with an oak lounge chair, low record cabinet, linen curtain and soft left daylight. Chair upholstery: Muted jade.",
+        "width": 1536,
+        "height": 1024,
+        "naturalWidth": 1536,
+        "naturalHeight": 1024
+      },
+      "reopened": true,
+      "noOverflow": true,
+      "keyboardSkip": true,
+      "htmlSha256": "82c90c45d273636c5d53e5a014753e49c4da149bdc8295c40afc1aacdc217fc2"
+    },
+    {
+      "version": "clay",
+      "device": "desktop",
+      "info": {
+        "alt": "A quiet listening room with an oak lounge chair, low record cabinet, linen curtain and soft left daylight. Chair upholstery: Muted clay.",
+        "width": 1536,
+        "height": 1024,
+        "naturalWidth": 1536,
+        "naturalHeight": 1024
+      },
+      "reopened": true,
+      "noOverflow": true,
+      "keyboardSkip": true,
+      "htmlSha256": "125a308dcd5241351600abd5c6640243f154fde0d3257603e23fc8aa41a23879"
+    },
+    {
+      "version": "original",
+      "device": "mobile",
+      "info": {
+        "alt": "A quiet listening room with an oak lounge chair, low record cabinet, linen curtain and soft left daylight. Chair upholstery: Muted jade.",
+        "width": 1536,
+        "height": 1024,
+        "naturalWidth": 1536,
+        "naturalHeight": 1024
+      },
+      "reopened": true,
+      "noOverflow": true,
+      "keyboardSkip": true,
+      "htmlSha256": "82c90c45d273636c5d53e5a014753e49c4da149bdc8295c40afc1aacdc217fc2"
+    },
+    {
+      "version": "clay",
+      "device": "mobile",
+      "info": {
+        "alt": "A quiet listening room with an oak lounge chair, low record cabinet, linen curtain and soft left daylight. Chair upholstery: Muted clay.",
+        "width": 1536,
+        "height": 1024,
+        "naturalWidth": 1536,
+        "naturalHeight": 1024
+      },
+      "reopened": true,
+      "noOverflow": true,
+      "keyboardSkip": true,
+      "htmlSha256": "125a308dcd5241351600abd5c6640243f154fde0d3257603e23fc8aa41a23879"
+    }
+  ],
+  "errors": []
+}
