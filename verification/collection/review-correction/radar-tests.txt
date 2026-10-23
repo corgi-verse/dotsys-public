@@ -1,0 +1,15 @@
+✔ deletion is visible in both lists and does not imply completion (5.261538ms)
+✔ unresolved to completed is an explicit unverified source claim (2.787797ms)
+✔ edits to text or evidence count by ID without being additions (1.884843ms)
+✔ new IDs count as additions in each list (1.690677ms)
+✔ unchanged, reordered rows and reordered JSON fields are unchanged (3.735649ms)
+✔ comparison follows the last valid selection and invalid data preserves it (2.525491ms)
+✔ different projects are not compared and user text stays inert (1.430995ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 28.761602

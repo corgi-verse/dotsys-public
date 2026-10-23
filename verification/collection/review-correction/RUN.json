@@ -1,0 +1,38 @@
+{
+  "schema": "dotsys.radar-review-correction/1",
+  "tested_source_revision": "d9796f0ff7d30d940f38bcaee2d29872948b2a05",
+  "source_files": {
+    "tools/project-radar/radar.js": "b621cbd19cfeb52c405d618a6eaf723eb93790df49242572da317048dd70fb8e",
+    "tools/project-radar/README.md": "e7fe61864875d8a5855ddd1e5b2c1c6115d50326825b71577b03e01b67d48e35",
+    "tests/test_radar.cjs": "90f21af543654a407c697996b5f8543c50d50459416a07812b365cc20d3bbffc"
+  },
+  "commands": [
+    {
+      "command": "node tests/test_radar.cjs",
+      "output": "radar-tests.txt",
+      "result": "7 tests pass"
+    },
+    {
+      "command": "pinned-python -m unittest discover -s tests -v",
+      "output": "python-tests.txt",
+      "result": "78 tests pass",
+      "dependencies": {
+        "jsonschema": "4.26.0",
+        "referencing": "0.37.0"
+      }
+    },
+    {
+      "command": "node tests/candidate-browser.cjs (collection browser harness)",
+      "output": "candidate-browser-stdout.txt",
+      "receipt": "candidate-browser.json",
+      "result": "7 sequential desktop/emulated-touch candidate paths pass"
+    }
+  ],
+  "boundary": "Local verification; no GitHub CI is configured. Removal does not establish resolution; a transition is a selected-source completion claim. No production website or community-adoption claim.",
+  "receipt_sha256": {
+    "radar-tests.txt": "591cdc1c782af6724456339bf8caf205a2c7af35928bc91fbb9b7c281c0e8a3a",
+    "python-tests.txt": "13acc72ddfa19c4672ec0d5727a74c5e2bbdbc7c69461ac87bd46bc2e1e0fcf0",
+    "candidate-browser-stdout.txt": "ce4cd05296793ff58cd3426b3b6c09fa25b94b80c983da1ece2505340d5d1b8b",
+    "candidate-browser.json": "6a03da98b42b02300da9ac5b967589925eaac49ca35a670f4299f1e6f24e1c1a"
+  }
+}
