@@ -17,6 +17,10 @@ function validate(value){
  return value;
 }
 function list(id,items){const target=$(id);target.replaceChildren();for(const row of items){const li=document.createElement('li');li.textContent=typeof row==='string'?row:row.text;if(typeof row!=='string'){const small=document.createElement('small');small.textContent=row.evidence;li.append(small);}target.append(li);}if(!items.length){const li=document.createElement('li');li.textContent='None recorded in this snapshot.';target.append(li);}}
+function evidenceDelta(before,after){
+ const oldRows=new Map(before.map(row=>[row.id,row]));const newRows=new Map(after.map(row=>[row.id,row]));
+ return {added:after.filter(row=>!oldRows.has(row.id)).length,changed:after.filter(row=>{const old=oldRows.get(row.id);return old&&(old.text!==row.text||old.evidence!==row.evidence);}).length,removed:before.filter(row=>!newRows.has(row.id)).length};
+}
 function display(value,label){
  validate(value);const previous=selected;selected=structuredClone(value);
  $('report-title').textContent=value.source.project;
@@ -27,7 +31,13 @@ function display(value,label){
  for(const key of ['completed','unresolved','next'])list(key,value[key]);
  for(const key of ['expected','observed','explanation'])$(key).textContent=value.versions[key];
  let delta='First selection. This report reflects the chosen snapshot only.';
- if(previous&&previous.source.project===value.source.project){const changed=key=>value[key].filter(row=>!previous[key].some(old=>JSON.stringify(old)===JSON.stringify(row))).length;delta=`Updated selection: ${changed('completed')} new or changed completed item(s); ${changed('unresolved')} new or changed unresolved item(s). Previous revision: ${previous.source.revision}.`;}
+ if(previous&&previous.source.project===value.source.project){
+  const completed=evidenceDelta(previous.completed,value.completed);const unresolved=evidenceDelta(previous.unresolved,value.unresolved);
+  const moved=previous.unresolved.filter(row=>!previous.completed.some(old=>old.id===row.id)&&!value.unresolved.some(current=>current.id===row.id)&&value.completed.some(current=>current.id===row.id)).length;
+  delta=`Updated selection: completed items — ${completed.added} added, ${completed.changed} changed, ${completed.removed} removed; unresolved items — ${unresolved.added} added, ${unresolved.changed} changed, ${unresolved.removed} removed. Previous revision: ${previous.source.revision}.`;
+  if(moved)delta+=` ${moved} item(s) moved from unresolved to completed in the selected source; that source's completion claim is not independently verified here.`;
+  if(unresolved.removed)delta+=' Removal alone does not establish resolution or completion.';
+ }
  else if(previous)delta='Selected a different project. This report now follows '+value.source.project+'.';
  $('delta').textContent=delta;$('load-status').className='';$('load-status').textContent='Loaded '+value.source.project+' from '+label+'.';
 }
