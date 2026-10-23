@@ -1,0 +1,44 @@
+{
+  "schema": "dotsys.radar/1",
+  "source": {
+    "project": "DotSys",
+    "revision": "ea31742a189b1e66609919381a6cdb3e45ba141b",
+    "as_of": "2026-10-23T05:02:55Z",
+    "url": "https://github.com/corgi-verse/dotsys-public/tree/ea31742a189b1e66609919381a6cdb3e45ba141b"
+  },
+  "completed": [
+    {
+      "id": "flagship",
+      "text": "Visual Concept Kit 1.1 preserves real listening-room images, editable briefs and a controlled clay-chair direction.",
+      "evidence": "Source includes the actual original/edit prompts and image hashes. Prior 1.0 browser receipts are historical; 1.1 accessible descriptions and PNG dimensions are tested offline."
+    },
+    {
+      "id": "integrity",
+      "text": "Package-wide contribution review integrity is corrected on public main.",
+      "evidence": "PR #2 merged at this revision after independent closure. Manifest, image/brief/CSS, process/evidence, license/notices, tool source and exact submission are bound to review. Local tests: 78 Python, 11 Paste Inbox, 2 Node; no GitHub CI is configured."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "domain",
+      "text": "Custom-domain acceptance remains unresolved.",
+      "evidence": "Recorded owner verification found new toolbox content at dotsys.vercel.app, old content at dotsys.dev, and a www DNS failure. Actual DNS/Worker/Pages configuration remains uninspected."
+    },
+    {
+      "id": "website-release",
+      "text": "Fresh 1.1 browser qualification, the small collection and revised website release remain separate work.",
+      "evidence": "This snapshot is pinned to the public integrity correction. It does not claim a later website publication, current live feed or independent community adoption."
+    }
+  ],
+  "versions": {
+    "expected": "Give your dot a bigger toolbox \u2014 Vercel website source a492a2c at the recorded verification",
+    "observed": "dotsys.dev: Ideas become projects. Projects become a System; www DNS failure at the recorded verification",
+    "explanation": "The observed custom domain and current Vercel deployment served different content. Routing/DNS/edge configuration has not been fully inspected, so the exact cause is unresolved. A main commit or Ready deployment does not establish custom-domain acceptance."
+  },
+  "next": [
+    "Finish current-version browser and collection acceptance, preserving exact artifacts and source receipts.",
+    "Publish the revised website after qualified release review and owner authorization. Local verification is not production acceptance.",
+    "Site maintainer: inspect actual authoritative DNS/routing/Worker/Pages configuration with authorized access before any change.",
+    "Select a newer reviewed source snapshot when evidence changes. This tool does not fetch updates or connect to Records/cross-chat feeds."
+  ]
+}
